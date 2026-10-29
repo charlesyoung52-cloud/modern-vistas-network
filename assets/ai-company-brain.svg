@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200" fill="none">
+  <defs>
+    <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#12CAFF" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#12CAFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12CAFF"/>
+      <stop offset="100%" stop-color="#00A8CC"/>
+    </linearGradient>
+  </defs>
+  <circle cx="140" cy="100" r="92" fill="url(#brainGlow)" />
+  <circle cx="140" cy="100" r="78" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5 5" />
+  <path d="M135 34 C112 30, 88 42, 79 62 C62 66, 52 83, 56 101 C49 116, 57 136, 74 142 C79 158, 98 168, 117 163 C126 165, 135 158, 135 147 Z" fill="#F8FAFC" stroke="#051329" stroke-width="5.5" stroke-linejoin="round" />
+  <path d="M145 34 C168 30, 192 42, 201 62 C218 66, 228 83, 224 101 C231 116, 223 136, 206 142 C201 158, 182 168, 163 163 C154 165, 145 158, 145 147 Z" fill="#F8FAFC" stroke="#051329" stroke-width="5.5" stroke-linejoin="round" />
+  <path d="M135 60 L108 60 L94 76 L76 76" stroke="#051329" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M135 96 L102 96 L86 114 L68 114" stroke="#00A8CC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M135 128 L112 128 L98 144" stroke="#051329" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M108 60 L102 96 L112 128" stroke="#12CAFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M145 60 L172 60 L186 76 L204 76" stroke="#051329" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M145 96 L178 96 L194 114 L212 114" stroke="#00A8CC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M145 128 L168 128 L182 144" stroke="#051329" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M172 60 L178 96 L168 128" stroke="#12CAFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="36" y1="96" x2="244" y2="96" stroke="#12CAFF" stroke-width="5" stroke-linecap="round" />
+  <circle cx="140" cy="96" r="11" fill="#12CAFF" stroke="#051329" stroke-width="4.5" />
+  <circle cx="108" cy="60" r="6.5" fill="#12CAFF" stroke="#051329" stroke-width="3.5" />
+  <circle cx="76" cy="76" r="5.5" fill="#FFFFFF" stroke="#051329" stroke-width="3" />
+  <circle cx="102" cy="96" r="7" fill="#12CAFF" stroke="#051329" stroke-width="3.5" />
+  <circle cx="68" cy="114" r="5.5" fill="#12CAFF" stroke="#051329" stroke-width="3" />
+  <circle cx="98" cy="144" r="6" fill="#FFFFFF" stroke="#051329" stroke-width="3" />
+  <circle cx="172" cy="60" r="6.5" fill="#12CAFF" stroke="#051329" stroke-width="3.5" />
+  <circle cx="204" cy="76" r="5.5" fill="#FFFFFF" stroke="#051329" stroke-width="3" />
+  <circle cx="178" cy="96" r="7" fill="#12CAFF" stroke="#051329" stroke-width="3.5" />
+  <circle cx="212" cy="114" r="5.5" fill="#12CAFF" stroke="#051329" stroke-width="3" />
+  <circle cx="182" cy="144" r="6" fill="#FFFFFF" stroke="#051329" stroke-width="3" />
+</svg>
