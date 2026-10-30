@@ -48,12 +48,13 @@
     }
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
     .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .navbar { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 20px; }
+    .navbar { display: flex; align-items: center; justify-content: center; height: 84px; gap: 44px; }
     .brand-link { display: flex; align-items: center; text-decoration: none; }
-    .brand-logo { height: 62px; width: auto; display: block; object-fit: contain; }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 600; transition: color 0.2s ease; }
-    .nav-links a:hover { color: var(--navy); }
+    .brand-logo { height: 54px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 28px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 15px; font-weight: 600; transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--teal); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 11px 20px; border-radius: 10px; font-family: 'Inter', sans-serif;
@@ -194,8 +195,9 @@
     }
     @media (max-width: 640px) {
       .container { padding: 0 16px; }
-      .navbar { height: 68px; gap: 10px; }
-      .brand-logo { height: 40px; max-width: 165px; }
+      .navbar { height: 68px; justify-content: space-between; gap: 10px; }
+      .nav-menu { gap: 12px; }
+      .brand-logo { height: 38px; max-width: 165px; }
       .nav-cta { padding: 9px 14px; font-size: 12.5px; white-space: nowrap; border-radius: 8px; }
       .hide-mobile { display: none; }
       .hero { padding: 28px 0 28px; }
@@ -203,7 +205,8 @@
       .service-pill { font-size: 10.5px; letter-spacing: 1.3px; padding: 5px 11px; margin-bottom: 14px; }
       .hero h1 { font-size: 30px; margin-bottom: 12px; }
       .hero-lead { font-size: 15px; margin-bottom: 20px; }
-      .hero-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px; }
+      .hero-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 16px; justify-items: center; text-align: center; }
+      .metric-item { align-items: center; text-align: center; }
       .metric-val { font-size: 16px; }
       .metric-label { font-size: 11px; line-height: 1.3; }
       .hero-visual { padding: 20px 16px; }
@@ -234,12 +237,12 @@
       <a href="#" class="brand-link" aria-label="Modern Vistas Network Home">
         <img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network — Custom Apps &amp; Automation" class="brand-logo" />
       </a>
-      <ul class="nav-links">
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#architecture">Company AI Brain</a></li>
-        <li><a href="#contact">Start a Project</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#capabilities">Capabilities</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      </div>
     </div>
   </div>
   <main>
