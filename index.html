@@ -364,6 +364,35 @@
     .pipe-output strong {
       color: var(--cyan);
     }
+    .brain-roi-box {
+      margin-top: 14px;
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+      border: 1px solid rgba(0, 168, 204, 0.3);
+      text-align: left;
+    }
+    .brain-roi-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .brain-roi-text {
+      font-size: 12.5px;
+      color: var(--navy);
+      line-height: 1.45;
+      font-weight: 500;
+    }
+    .brain-card-cta {
+      margin-top: 12px;
+      width: 100%;
+    }
     /* THREE PILLARS SECTION */
     .pillars {
       padding: 28px 0 48px;
@@ -450,7 +479,31 @@
     .pillar-card p {
       font-size: 14px;
       color: var(--muted);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
+    }
+    .pillar-savings {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-left: 3.5px solid #10B981;
+      border-radius: 9px;
+      padding: 11px 12px;
+      margin-bottom: 16px;
+    }
+    .pillar-savings-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #047857;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .pillar-savings-desc {
+      font-size: 12.5px;
+      color: var(--navy);
+      line-height: 1.45;
+      font-weight: 500;
     }
     .pillar-tags {
       display: flex;
@@ -459,6 +512,35 @@
       list-style: none;
       padding-top: 14px;
       border-top: 1px solid #F1F5F9;
+      margin-bottom: 16px;
+    }
+    .pillar-cta-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 9px;
+      background: var(--navy);
+      color: #FFFFFF;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .pillar-cta-link span {
+      color: var(--cyan);
+      font-size: 15px;
+      transition: transform 0.2s ease;
+    }
+    .pillar-cta-link:hover {
+      background: var(--navy-light);
+    }
+    .pillar-cta-link:hover span {
+      transform: translateX(4px);
     }
     .pillar-tags li {
       font-family: 'JetBrains Mono', monospace;
@@ -841,6 +923,13 @@
                 <span class="pipe-state">SYNCED ●</span>
               </div>
             </div>
+            <div class="brain-roi-box">
+              <span class="brain-roi-label">💰 TIME &amp; COST SAVINGS</span>
+              <div class="brain-roi-text">
+                Reclaims <strong>15–30+ hrs/wk</strong> across your team, cuts new-hire training time by <strong>70%</strong>, and automates large-scale database creation &amp; updates with zero manual labor.
+              </div>
+            </div>
+            <a href="company-ai-brain.html" class="btn btn-cyan brain-card-cta">Explore the Company AI Brain →</a>
           </div>
         </div>
       </div>
@@ -872,12 +961,21 @@
               <p>
                 Purpose-built internal tools, customer portals, and full-stack web applications designed around your exact operational logic—without off-the-shelf bloat.
               </p>
+              <div class="pillar-savings">
+                <span class="pillar-savings-title">💰 SAVES $10K–$50K+/YR &amp; 15+ HRS/WK</span>
+                <div class="pillar-savings-desc">
+                  Eliminate expensive per-seat SaaS licenses and clunky 15-tab spreadsheet workarounds with one fast system you own 100%.
+                </div>
+              </div>
             </div>
-            <ul class="pillar-tags">
-              <li>Client Portals</li>
-              <li>Internal Dashboards</li>
-              <li>Custom SaaS</li>
-            </ul>
+            <div>
+              <ul class="pillar-tags">
+                <li>Client Portals</li>
+                <li>Internal Dashboards</li>
+                <li>Custom SaaS</li>
+              </ul>
+              <a href="custom-applications.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
+            </div>
           </article>
           <!-- Pillar 2: Automations -->
           <article class="pillar-card">
@@ -898,12 +996,21 @@
               <p>
                 Eliminate repetitive copy-pasting and manual bottlenecks. We connect your CRM, ERP, billing, and communication tools into reliable, event-driven pipelines.
               </p>
+              <div class="pillar-savings">
+                <span class="pillar-savings-title">⚡ RECLAIMS 20–40+ HRS/WEEK</span>
+                <div class="pillar-savings-desc">
+                  Replace manual data entry, invoicing delays, and costly human errors with autonomous 24/7 workflows at a fraction of a new hire’s cost.
+                </div>
+              </div>
             </div>
-            <ul class="pillar-tags">
-              <li>API Orchestration</li>
-              <li>Webhook Pipelines</li>
-              <li>Data Sync</li>
-            </ul>
+            <div>
+              <ul class="pillar-tags">
+                <li>API Orchestration</li>
+                <li>Webhook Pipelines</li>
+                <li>Data Sync</li>
+              </ul>
+              <a href="workflow-automations.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
+            </div>
           </article>
           <!-- Pillar 3: AI Integrations -->
           <article class="pillar-card">
@@ -922,12 +1029,21 @@
               <p>
                 Deploy practical, high-ROI intelligence directly inside your software—from custom LLM agents and private knowledge bases (RAG) to automated document processing.
               </p>
+              <div class="pillar-savings">
+                <span class="pillar-savings-title">🚀 10X FASTER EXECUTION &amp; TRIAGE</span>
+                <div class="pillar-savings-desc">
+                  Turn hours of reading PDFs, extracting invoices, and triaging leads into 2-second autonomous actions—scaling output without extra payroll.
+                </div>
+              </div>
             </div>
-            <ul class="pillar-tags">
-              <li>Custom AI Agents</li>
-              <li>Private RAG</li>
-              <li>Intelligent Triage</li>
-            </ul>
+            <div>
+              <ul class="pillar-tags">
+                <li>Custom AI Agents</li>
+                <li>Private RAG</li>
+                <li>Intelligent Triage</li>
+              </ul>
+              <a href="ai-integrations.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
+            </div>
           </article>
         </div>
       </div>
@@ -976,10 +1092,10 @@
         <span>MODERN VISTAS NETWORK</span>
       </div>
       <div class="footer-links">
-        <a href="#capabilities">Custom Apps</a>
-        <a href="#capabilities">Automations</a>
-        <a href="#capabilities">AI Integrations</a>
-        <a href="#architecture">Company AI Brain</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
       </div>
       <div>
         &copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a>
