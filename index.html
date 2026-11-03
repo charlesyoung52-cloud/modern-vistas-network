@@ -71,7 +71,7 @@
       align-items: center;
       justify-content: center;
       height: 84px;
-      gap: 44px;
+      gap: 32px;
     }
     .brand-link {
       display: flex;
@@ -88,12 +88,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 28px;
+      gap: 24px;
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 22px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -101,11 +101,13 @@
     .nav-links a {
       text-decoration: none;
       color: var(--navy);
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: var(--teal);
     }
     /* BUTTONS */
@@ -682,17 +684,42 @@
     .footer-links a:hover {
       color: var(--navy);
     }
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .hero-grid,
       .pillars-grid,
       .cta-card {
         grid-template-columns: 1fr;
       }
+      .navbar {
+        height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px 16px;
+      }
+      .nav-menu {
+        display: contents;
+      }
+      .brand-link {
+        order: 1;
+      }
+      .nav-cta {
+        order: 2;
+      }
       .nav-links {
-        display: none;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        padding-top: 8px;
+        border-top: 1px solid #F1F5F9;
+      }
+      .nav-links a {
+        font-size: 13px;
       }
       .brand-logo {
-        height: 48px;
+        height: 46px;
       }
     }
     @media (max-width: 640px) {
@@ -700,16 +727,18 @@
         padding: 0 16px;
       }
       .navbar {
-        height: 68px;
-        justify-content: space-between;
-        gap: 10px;
-      }
-      .nav-menu {
-        gap: 12px;
+        padding: 10px 0;
+        gap: 8px 10px;
       }
       .brand-logo {
         height: 38px;
         max-width: 165px;
+      }
+      .nav-links {
+        gap: 6px 12px;
+      }
+      .nav-links a {
+        font-size: 12.5px;
       }
       .nav-cta {
         padding: 9px 14px;
@@ -836,12 +865,16 @@
   <!-- TOP NAVIGATION -->
   <div class="navbar-wrap">
     <div class="container navbar">
-      <a href="#" class="brand-link" aria-label="Modern Vistas Network Home">
+      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home">
         <img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network — Custom Apps &amp; Automation" class="brand-logo" />
       </a>
       <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="custom-applications.html">Custom Apps</a></li>
+          <li><a href="workflow-automations.html">Automations</a></li>
+          <li><a href="ai-integrations.html">AI Integrations</a></li>
         </ul>
         <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
       </div>
