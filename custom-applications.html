@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Applications &amp; Portals — Modern Vistas Network</title>
+  <meta name="description" content="Save $10k–$50k+/yr in per-seat SaaS fees and reclaim 15+ hrs/week with custom web applications, client portals, and internal command dashboards built around your exact workflow." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/custom-applications.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --navy: #051329;
+      --navy-light: #0D2342;
+      --cyan: #12CAFF;
+      --teal: #00A8CC;
+      --text: #051329;
+      --muted: #52637A;
+      --border: #E2E8F0;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar { display: flex; align-items: center; justify-content: center; height: 84px; gap: 44px; }
+    .brand-link { display: flex; align-items: center; text-decoration: none; }
+    .brand-logo { height: 54px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14.5px; font-weight: 600; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 14px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1.5px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-cyan {
+      background: var(--cyan); color: var(--navy); font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(18, 202, 255, 0.28);
+    }
+    .btn-cyan:hover { background: #33D3FF; transform: translateY(-1px); }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(155deg, #051329 0%, #0D2342 100%);
+      color: #FFFFFF;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--cyan);
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      letter-spacing: 1.6px; text-transform: uppercase; color: var(--navy);
+      background: var(--cyan); padding: 6px 14px; border-radius: 7px; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700; line-height: 1.12; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .page-hero h1 span { color: var(--cyan); }
+    .page-hero p { font-size: 16.5px; color: #CBD5E1; max-width: 720px; margin-bottom: 28px; }
+    .savings-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .save-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(18, 202, 255, 0.25);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .save-val {
+      font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700;
+      color: var(--cyan); display: block; margin-bottom: 4px;
+    }
+    .save-txt { font-size: 13px; color: #E2E8F0; line-height: 1.4; }
+
+    /* SECTIONS */
+    .section { padding: 52px 0; }
+    .section-alt { background: #FFFFFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .sec-title {
+      font-family: 'Chakra Petch', sans-serif; font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    }
+    .sec-desc { font-size: 15.5px; color: var(--muted); max-width: 700px; margin-bottom: 30px; }
+
+    /* 6 USE CASE CARDS */
+    .uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .uc-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(5, 19, 41, 0.03);
+    }
+    .uc-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .uc-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: var(--navy); color: var(--cyan); padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-roi {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-card h3 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--navy); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .uc-card p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .uc-bullets {
+      list-style: none; padding-top: 12px; border-top: 1px solid #F1F5F9;
+      display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--navy);
+    }
+    .uc-bullets li::before { content: "→ "; color: var(--teal); font-weight: 700; }
+
+    /* COMPARISON TABLE */
+    .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .comp-col {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 22px;
+    }
+    .comp-col.highlight {
+      background: var(--navy); color: #FFFFFF; border-color: var(--cyan);
+      box-shadow: 0 16px 36px rgba(5, 19, 41, 0.14);
+    }
+    .comp-col h4 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 18px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .comp-col.highlight h4 { color: var(--cyan); }
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; }
+
+    /* CROSS NAV & CTA */
+    .cross-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+    .cross-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; text-decoration: none; color: var(--navy); transition: all 0.2s ease;
+    }
+    .cross-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .cross-card h4 { font-family: 'Chakra Petch', sans-serif; font-size: 16px; text-transform: uppercase; margin-bottom: 6px; }
+    .cross-card p { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+    .cross-card span { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--teal); }
+
+    .cta-section { padding: 36px 0 56px; }
+    .cta-card {
+      background: var(--navy); color: #FFFFFF; border-radius: var(--radius-lg); padding: 36px;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .cta-card h2 { font-family: 'Chakra Petch', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 8px; }
+    .cta-card p { color: #CBD5E1; font-size: 14.5px; }
+    .quick-form {
+      display: flex; flex-direction: column; gap: 10px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px; border-radius: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .quick-form input, .quick-form select, .quick-form textarea {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18); background: rgba(5, 19, 41, 0.75);
+      color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
+    }
+    .quick-form textarea { min-height: 105px; resize: vertical; }
+    .form-feedback { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--cyan); display: none; }
+
+    footer { margin-top: auto; background: #FFFFFF; border-top: 1px solid var(--border); padding: 22px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--navy); }
+    .footer-brand img { height: 32px; width: auto; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
+
+    @media (max-width: 900px) {
+      .savings-strip, .uc-grid, .comp-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .navbar { height: 68px; justify-content: space-between; }
+      .brand-logo { height: 38px; max-width: 165px; }
+      .hide-mobile { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="custom-applications.html" class="active">Custom Apps</a></li>
+          <li><a href="workflow-automations.html">Automations</a></li>
+          <li><a href="ai-integrations.html">AI Integrations</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="pill">01 // CUSTOM SOFTWARE &amp; PORTALS</div>
+        <h1>Custom Applications Built to <span>Save Time &amp; Eliminate SaaS Bloat.</span></h1>
+        <p>
+          Stop paying $50–$200/seat every month for rigid off-the-shelf software that only fits 60% of your workflow—forcing your team to bridge the gap with messy 15-tab spreadsheets. We engineer fast, tailored web applications, client portals, and internal command hubs that fit your business like a glove.
+        </p>
+        <div class="savings-strip">
+          <div class="save-card">
+            <span class="save-val">Save $10k–$50k+/yr</span>
+            <span class="save-txt">Eliminate recurring per-user SaaS license fees and own your software 100% with unlimited seats.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">Reclaim 15+ Hrs/Wk</span>
+            <span class="save-txt">Replace 5 disconnected tools and fragile spreadsheets with one unified screen designed for speed.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">80% Fewer Calls</span>
+            <span class="save-txt">Self-service client portals let customers check status, pay invoices, and upload docs 24/7.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">DETAILED USE CASES // WHAT WE BUILD</div>
+        <h2 class="sec-title">6 High-ROI Custom Applications We Build for Growing Companies.</h2>
+        <p class="sec-desc">
+          Every application is engineered for speed, mobile responsiveness, and direct integration with your databases and AI Brain.
+        </p>
+
+        <div class="uc-grid">
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 01</span>
+                <span class="uc-roi">SAVES 15–25 HRS/WK</span>
+              </div>
+              <h3>Unified Internal Operations &amp; Dispatch Hubs</h3>
+              <p>
+                Replace scattered spreadsheets, whiteboards, and group texts with a single command center where dispatchers, project managers, and ops teams manage every job in real time.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Drag-and-drop job scheduling, crew assignment, and live status boards</li>
+              <li>Automated capacity alerts and bottleneck detection</li>
+              <li>Role-based views so every employee sees only what they need to execute</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 02</span>
+                <span class="uc-roi">CUTS "STATUS CALLS" BY 80%</span>
+              </div>
+              <h3>Branded 24/7 Client &amp; Vendor Portals</h3>
+              <p>
+                Give your clients or vendors a sleek, login-protected portal to track project milestones, approve proofs, upload compliance documents, and pay invoices without calling your office.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Live order/project progress trackers (like Domino's tracker for your services)</li>
+              <li>Secure document vault with automated expiration &amp; signature requests</li>
+              <li>Embedded Stripe/ACH billing and instant re-ordering</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 03</span>
+                <span class="uc-roi">3X FASTER DEAL CLOSING</span>
+              </div>
+              <h3>Custom CPQ (Configure-Price-Quote) &amp; Estimating Engines</h3>
+              <p>
+                When your pricing depends on complex variables, dimensions, labor tiers, or custom configurations, standard CRMs fail. We build instant estimating apps with built-in margin protection.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Interactive calculators that compute material, labor, and shipping in milliseconds</li>
+              <li>Automatic gross-margin guardrails so sales reps never underprice a job</li>
+              <li>1-click generation of branded PDF proposals and contract links</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 04</span>
+                <span class="uc-roi">ZERO PAPERWORK LAG</span>
+              </div>
+              <h3>Field Service, Warehouse &amp; Mobile Web Apps</h3>
+              <p>
+                Empower technicians, inspectors, drivers, and warehouse teams with a fast mobile web app that works on any phone or tablet—eliminating paper clipboards and end-of-week data entry.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Mobile checklists, before/after photo capture, and digital customer sign-off</li>
+              <li>QR/Barcode inventory scanning that updates your master database live</li>
+              <li>GPS time-stamping and instant office invoicing the second a job finishes</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 05</span>
+                <span class="uc-roi">INSTANT PROFIT VISIBILITY</span>
+              </div>
+              <h3>Executive Financial &amp; Job-Costing Dashboards</h3>
+              <p>
+                Pull live data from QuickBooks, Stripe, payroll, and your CRM into a custom executive dashboard that shows true net profitability per client, per crew, and per service line.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Live labor + material cost vs. quoted budget tracking</li>
+              <li>Sales pipeline velocity, rep leaderboards, and cash-flow forecasting</li>
+              <li>Automated red-flag alerts when a project exceeds 80% of budget</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">USE CASE 06</span>
+                <span class="uc-roi">NEW REVENUE STREAM</span>
+              </div>
+              <h3>Proprietary SaaS Platforms &amp; Commercial MVPs</h3>
+              <p>
+                Have an industry insight or internal tool that other companies would pay to use? We architect multi-tenant SaaS applications with subscription billing, user auth, and AI built in.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Multi-tenant architecture, Stripe subscriptions, and onboarding flows</li>
+              <li>Clean, modern UI engineered for high retention and enterprise trust</li>
+              <li>100% IP ownership—no revenue share, no platform lock-in</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="eyebrow">THE FINANCIAL CASE // WHY CUSTOM WINS</div>
+        <h2 class="sec-title">How Custom Software Pays for Itself.</h2>
+        <div class="comp-grid" style="margin-top: 24px;">
+          <div class="comp-col">
+            <h4>✗ Fragile Spreadsheets</h4>
+            <ul class="comp-list">
+              <li>• Breaks when someone edits the wrong formula</li>
+              <li>• Zero audit trail or role-based security</li>
+              <li>• Impossible for clients or mobile crews to use cleanly</li>
+              <li>• Costs 15–30 hrs/week in manual copy-pasting</li>
+            </ul>
+          </div>
+          <div class="comp-col">
+            <h4>✗ Off-the-Shelf SaaS Bloat</h4>
+            <ul class="comp-list">
+              <li>• $1,500–$5,000+/month in per-seat license taxes</li>
+              <li>• Forces you to change your business to fit their rigid rules</li>
+              <li>• 80% of screen cluttered with features you never use</li>
+              <li>• Expensive "Enterprise Tier" paywalls for API access</li>
+            </ul>
+          </div>
+          <div class="comp-col highlight">
+            <h4>✓ Modern Vistas Custom App</h4>
+            <ul class="comp-list">
+              <li>• $0 per-seat fees—add 10 or 500 users for free</li>
+              <li>• Built 100% around your exact terminology &amp; workflow</li>
+              <li>• Connects natively to your Company AI Brain &amp; databases</li>
+              <li>• You own the asset and intellectual property outright</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cross-grid" style="margin-top: 36px;">
+          <a href="company-ai-brain.html" class="cross-card">
+            <h4>★ Company AI Brain &amp; DB Hub</h4>
+            <p>See how our flagship AI Brain automates large databases, employee training, and 24/7 support.</p>
+            <span>Explore the Flagship AI Brain →</span>
+          </a>
+          <a href="workflow-automations.html" class="cross-card">
+            <h4>02 // Workflow Automations</h4>
+            <p>Connect your CRM, accounting, and apps into zero-touch 24/7 pipelines.</p>
+            <span>Explore Automations →</span>
+          </a>
+          <a href="ai-integrations.html" class="cross-card">
+            <h4>03 // AI Integrations</h4>
+            <p>Embed document extraction, voice AI, and smart triage agents into your stack.</p>
+            <span>Explore AI Integrations →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="pill" style="margin-bottom: 12px;">BUILD YOUR CUSTOM APPLICATION</div>
+            <h2>Scope Your Custom Portal or Internal App.</h2>
+            <p>Tell us what spreadsheet bottleneck or overpriced SaaS tool you want to replace—we’ll design a fast, fixed-scope blueprint.</p>
+          </div>
+          <form class="quick-form" id="project-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+            </div>
+            <select name="focus" aria-label="Primary Focus">
+              <option value="Custom Application" selected>Custom Application / Portal</option>
+              <option value="Company AI Brain">Company AI Brain</option>
+              <option value="Workflow Automation">Workflow Automation</option>
+              <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
+              <option value="Full Stack (App + Automation + AI)">Full Stack (App + Automation + AI)</option>
+            </select>
+            <textarea name="goal" rows="4" placeholder="Describe the portal, dashboard, or custom software you want to build..." required></textarea>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">Request App Blueprint →</button>
+            <div class="form-feedback" id="form-feedback">✓ Request received! We'll reach out shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/mvn-separate-badge-white.svg" alt="MVN Icon" />
+        <span>MODERN VISTAS NETWORK</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
+      </div>
+      <div>&copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('project-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

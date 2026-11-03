@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Automations &amp; API Pipelines — Modern Vistas Network</title>
+  <meta name="description" content="Reclaim 20–40+ hours every week by automating repetitive data entry, client onboarding, invoicing, and multi-system database synchronization." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/workflow-automations.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --navy: #051329;
+      --navy-light: #0D2342;
+      --cyan: #12CAFF;
+      --teal: #00A8CC;
+      --text: #051329;
+      --muted: #52637A;
+      --border: #E2E8F0;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar { display: flex; align-items: center; justify-content: center; height: 84px; gap: 44px; }
+    .brand-link { display: flex; align-items: center; text-decoration: none; }
+    .brand-logo { height: 54px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14.5px; font-weight: 600; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 14px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1.5px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-cyan {
+      background: var(--cyan); color: var(--navy); font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(18, 202, 255, 0.28);
+    }
+    .btn-cyan:hover { background: #33D3FF; transform: translateY(-1px); }
+
+    .page-hero {
+      background: linear-gradient(155deg, #051329 0%, #0D2342 100%);
+      color: #FFFFFF;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--cyan);
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      letter-spacing: 1.6px; text-transform: uppercase; color: var(--navy);
+      background: var(--cyan); padding: 6px 14px; border-radius: 7px; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700; line-height: 1.12; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .page-hero h1 span { color: var(--cyan); }
+    .page-hero p { font-size: 16.5px; color: #CBD5E1; max-width: 720px; margin-bottom: 28px; }
+    .savings-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .save-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(18, 202, 255, 0.25);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .save-val {
+      font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700;
+      color: var(--cyan); display: block; margin-bottom: 4px;
+    }
+    .save-txt { font-size: 13px; color: #E2E8F0; line-height: 1.4; }
+
+    .section { padding: 52px 0; }
+    .section-alt { background: #FFFFFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .sec-title {
+      font-family: 'Chakra Petch', sans-serif; font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    }
+    .sec-desc { font-size: 15.5px; color: var(--muted); max-width: 700px; margin-bottom: 30px; }
+
+    .uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .uc-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(5, 19, 41, 0.03);
+    }
+    .uc-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .uc-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: var(--navy); color: var(--cyan); padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-roi {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-card h3 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--navy); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .uc-card p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .uc-bullets {
+      list-style: none; padding-top: 12px; border-top: 1px solid #F1F5F9;
+      display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--navy);
+    }
+    .uc-bullets li::before { content: "→ "; color: var(--teal); font-weight: 700; }
+
+    .cross-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+    .cross-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; text-decoration: none; color: var(--navy); transition: all 0.2s ease;
+    }
+    .cross-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .cross-card h4 { font-family: 'Chakra Petch', sans-serif; font-size: 16px; text-transform: uppercase; margin-bottom: 6px; }
+    .cross-card p { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+    .cross-card span { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--teal); }
+
+    .cta-section { padding: 36px 0 56px; }
+    .cta-card {
+      background: var(--navy); color: #FFFFFF; border-radius: var(--radius-lg); padding: 36px;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .cta-card h2 { font-family: 'Chakra Petch', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 8px; }
+    .cta-card p { color: #CBD5E1; font-size: 14.5px; }
+    .quick-form {
+      display: flex; flex-direction: column; gap: 10px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px; border-radius: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .quick-form input, .quick-form select, .quick-form textarea {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18); background: rgba(5, 19, 41, 0.75);
+      color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
+    }
+    .quick-form textarea { min-height: 105px; resize: vertical; }
+    .form-feedback { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--cyan); display: none; }
+
+    footer { margin-top: auto; background: #FFFFFF; border-top: 1px solid var(--border); padding: 22px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--navy); }
+    .footer-brand img { height: 32px; width: auto; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
+
+    @media (max-width: 900px) {
+      .savings-strip, .uc-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .navbar { height: 68px; justify-content: space-between; }
+      .brand-logo { height: 38px; max-width: 165px; }
+      .hide-mobile { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="custom-applications.html">Custom Apps</a></li>
+          <li><a href="workflow-automations.html" class="active">Automations</a></li>
+          <li><a href="ai-integrations.html">AI Integrations</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="pill">02 // EVENT-DRIVEN WORKFLOW AUTOMATIONS</div>
+        <h1>Eliminate Repetitive Labor &amp; <span>Reclaim 20–40+ Hours a Week.</span></h1>
+        <p>
+          Every hour your team spends copying data from emails into CRMs, chasing signatures, building weekly spreadsheets, or reconciling invoices is money burned. We engineer bulletproof API and webhook pipelines that run 24/7 with zero human error—at a fraction of the cost of hiring another admin.
+        </p>
+        <div class="savings-strip">
+          <div class="save-card">
+            <span class="save-val">20–40+ Hrs/Wk</span>
+            <span class="save-txt">Eliminated across admin, ops, sales, and bookkeeping by removing manual data transfer.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">$45k–$85k/yr</span>
+            <span class="save-txt">Saved in avoided administrative payroll while scaling your transaction volume 5x.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">Under 2 Sec</span>
+            <span class="save-txt">Speed from inbound lead or signed contract to full system provisioning &amp; invoicing.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">DETAILED AUTOMATION CATALOG // ZERO-TOUCH PIPELINES</div>
+        <h2 class="sec-title">6 High-ROI Automations That Pay for Themselves in Weeks.</h2>
+        <p class="sec-desc">
+          We connect your existing tools (CRMs, ERPs, QuickBooks, Stripe, Google Workspace, Slack, SQL databases, and industry software) into seamless, self-running pipelines.
+        </p>
+
+        <div class="uc-grid">
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 01</span>
+                <span class="uc-roi">SAVES 12+ HRS/WK</span>
+              </div>
+              <h3>Instant Lead-to-Cash &amp; Client Onboarding</h3>
+              <p>
+                The moment a prospect signs a proposal, our automation pipeline executes 10 onboarding steps in 2 seconds—without a human lifting a finger.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Auto-generates and sends the first Stripe/QuickBooks deposit invoice</li>
+              <li>Creates structured Google Drive/SharePoint folders &amp; project boards</li>
+              <li>Sends welcome email with intake links and alerts the delivery team in Slack</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 02</span>
+                <span class="uc-roi">ELIMINATES BILLING LEAKS</span>
+              </div>
+              <h3>Automated Bookkeeping, Invoicing &amp; AR Follow-Ups</h3>
+              <p>
+                Stop letting billable work slip through the cracks or waiting weeks to send invoices. We automate your entire billing lifecycle from job completion to bank reconciliation.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Auto-triggers invoices the instant a job or milestone is marked complete</li>
+              <li>Polite, automated multi-stage SMS &amp; email nudges for overdue invoices</li>
+              <li>Two-way sync between CRM deals, Stripe/Square payments, and QuickBooks/Xero</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 03</span>
+                <span class="uc-roi">100% DATA ACCURACY</span>
+              </div>
+              <h3>Multi-System Database &amp; Inventory Synchronization</h3>
+              <p>
+                When you update a customer record, price, or inventory count in one system, it updates everywhere automatically—eliminating double entry and overselling.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Real-time two-way sync across Shopify/WooCommerce, ERP, Warehouse, and CRM</li>
+              <li>Automated supplier PO generation when stock drops below reorder thresholds</li>
+              <li>Feeds directly into your centralized <a href="company-ai-brain.html" style="color: var(--teal); font-weight: 600;">Company AI Brain</a></li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 04</span>
+                <span class="uc-roi">5X HIGHER LEAD CONVERSION</span>
+              </div>
+              <h3>Speed-to-Lead Routing &amp; Multi-Channel Nurture</h3>
+              <p>
+                Responding to a web lead in under 60 seconds increases close rates by over 300%. We automate instant capture, enrichment, qualification, and follow-up.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Instant SMS + email response within 10 seconds of form, ad, or missed call</li>
+              <li>Auto-enriches company/contact data and assigns the right sales rep</li>
+              <li>Automated follow-up sequences that pause the moment the prospect replies</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 05</span>
+                <span class="uc-roi">ZERO COMPLIANCE RISKS</span>
+              </div>
+              <h3>Vendor Compliance, COI/W-9 &amp; Contract Tracking</h3>
+              <p>
+                Never chase down expired insurance certificates, licenses, or vendor contracts manually again. The system tracks every date and collects renewals automatically.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Automated 30/15/7-day renewal requests sent to vendors or subcontractors</li>
+              <li>Blocks dispatch or payout automatically if a vendor's COI is expired</li>
+              <li>Auto-files incoming PDFs into the right folder and updates database dates</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">PIPELINE 06</span>
+                <span class="uc-roi">SAVES 8+ HRS/WK</span>
+              </div>
+              <h3>Automated Executive Briefings &amp; Exception Alerts</h3>
+              <p>
+                Stop spending Friday afternoons compiling KPI spreadsheets. Receive automated daily and weekly digests plus real-time alerts when something needs attention.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Monday 7:00 AM Slack/Email summary of revenue, pipeline, and open bottlenecks</li>
+              <li>Instant alerts when a high-value lead stalls or a project margin drops</li>
+              <li>Custom connectors for legacy software that lacks modern APIs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="eyebrow">COMPLETE ECOSYSTEM // EXPLORE OUR OTHER CORE SERVICES</div>
+        <h2 class="sec-title">Combine Automations With Our Flagship AI Brain &amp; Custom Apps.</h2>
+        <div class="cross-grid">
+          <a href="company-ai-brain.html" class="cross-card">
+            <h4>★ Company AI Brain &amp; DB Hub</h4>
+            <p>Our most expansive service: automated large-scale database creation, employee training, and 24/7 intelligence.</p>
+            <span>Explore the Flagship AI Brain →</span>
+          </a>
+          <a href="custom-applications.html" class="cross-card">
+            <h4>01 // Custom Applications</h4>
+            <p>Replace per-seat SaaS bloat with custom portals and internal operations hubs.</p>
+            <span>Explore Custom Apps →</span>
+          </a>
+          <a href="ai-integrations.html" class="cross-card">
+            <h4>03 // AI Integrations</h4>
+            <p>Add intelligent PDF/invoice reading, voice AI, and autonomous agents to your workflows.</p>
+            <span>Explore AI Integrations →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="pill" style="margin-bottom: 12px;">AUTOMATE YOUR WORKFLOWS</div>
+            <h2>Tell Us What Manual Task You Want Eliminated.</h2>
+            <p>We’ll audit your repetitive processes and design an event-driven automation blueprint that pays for itself.</p>
+          </div>
+          <form class="quick-form" id="project-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+            </div>
+            <select name="focus" aria-label="Primary Focus">
+              <option value="Workflow Automation" selected>Workflow Automation</option>
+              <option value="Company AI Brain">Company AI Brain</option>
+              <option value="Custom Application">Custom Application</option>
+              <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
+              <option value="Full Stack (App + Automation + AI)">Full Stack (App + Automation + AI)</option>
+            </select>
+            <textarea name="goal" rows="4" placeholder="Describe the manual data entry, onboarding, or multi-app workflow you want automated..." required></textarea>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">Request Automation Blueprint →</button>
+            <div class="form-feedback" id="form-feedback">✓ Request received! We'll reach out shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/mvn-separate-badge-white.svg" alt="MVN Icon" />
+        <span>MODERN VISTAS NETWORK</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
+      </div>
+      <div>&copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('project-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

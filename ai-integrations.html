@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Integrations &amp; Autonomous Agents — Modern Vistas Network</title>
+  <meta name="description" content="Embed practical, high-ROI AI agents, intelligent document extraction, and voice AI directly inside your software to execute hours of work in seconds." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/ai-integrations.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --navy: #051329;
+      --navy-light: #0D2342;
+      --cyan: #12CAFF;
+      --teal: #00A8CC;
+      --text: #051329;
+      --muted: #52637A;
+      --border: #E2E8F0;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar { display: flex; align-items: center; justify-content: center; height: 84px; gap: 44px; }
+    .brand-link { display: flex; align-items: center; text-decoration: none; }
+    .brand-logo { height: 54px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14.5px; font-weight: 600; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 14px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1.5px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-cyan {
+      background: var(--cyan); color: var(--navy); font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(18, 202, 255, 0.28);
+    }
+    .btn-cyan:hover { background: #33D3FF; transform: translateY(-1px); }
+
+    .page-hero {
+      background: linear-gradient(155deg, #051329 0%, #0D2342 100%);
+      color: #FFFFFF;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--cyan);
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      letter-spacing: 1.6px; text-transform: uppercase; color: var(--navy);
+      background: var(--cyan); padding: 6px 14px; border-radius: 7px; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700; line-height: 1.12; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .page-hero h1 span { color: var(--cyan); }
+    .page-hero p { font-size: 16.5px; color: #CBD5E1; max-width: 720px; margin-bottom: 28px; }
+    .savings-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .save-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(18, 202, 255, 0.25);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .save-val {
+      font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700;
+      color: var(--cyan); display: block; margin-bottom: 4px;
+    }
+    .save-txt { font-size: 13px; color: #E2E8F0; line-height: 1.4; }
+
+    .section { padding: 52px 0; }
+    .section-alt { background: #FFFFFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .sec-title {
+      font-family: 'Chakra Petch', sans-serif; font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    }
+    .sec-desc { font-size: 15.5px; color: var(--muted); max-width: 700px; margin-bottom: 30px; }
+
+    .uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .uc-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(5, 19, 41, 0.03);
+    }
+    .uc-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .uc-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: var(--navy); color: var(--cyan); padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-roi {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-card h3 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--navy); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .uc-card p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .uc-bullets {
+      list-style: none; padding-top: 12px; border-top: 1px solid #F1F5F9;
+      display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--navy);
+    }
+    .uc-bullets li::before { content: "→ "; color: var(--teal); font-weight: 700; }
+
+    .cross-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+    .cross-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; text-decoration: none; color: var(--navy); transition: all 0.2s ease;
+    }
+    .cross-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .cross-card h4 { font-family: 'Chakra Petch', sans-serif; font-size: 16px; text-transform: uppercase; margin-bottom: 6px; }
+    .cross-card p { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+    .cross-card span { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--teal); }
+
+    .cta-section { padding: 36px 0 56px; }
+    .cta-card {
+      background: var(--navy); color: #FFFFFF; border-radius: var(--radius-lg); padding: 36px;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .cta-card h2 { font-family: 'Chakra Petch', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 8px; }
+    .cta-card p { color: #CBD5E1; font-size: 14.5px; }
+    .quick-form {
+      display: flex; flex-direction: column; gap: 10px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px; border-radius: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .quick-form input, .quick-form select, .quick-form textarea {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18); background: rgba(5, 19, 41, 0.75);
+      color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
+    }
+    .quick-form textarea { min-height: 105px; resize: vertical; }
+    .form-feedback { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--cyan); display: none; }
+
+    footer { margin-top: auto; background: #FFFFFF; border-top: 1px solid var(--border); padding: 22px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--navy); }
+    .footer-brand img { height: 32px; width: auto; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
+
+    @media (max-width: 900px) {
+      .savings-strip, .uc-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .navbar { height: 68px; justify-content: space-between; }
+      .brand-logo { height: 38px; max-width: 165px; }
+      .hide-mobile { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="custom-applications.html">Custom Apps</a></li>
+          <li><a href="workflow-automations.html">Automations</a></li>
+          <li><a href="ai-integrations.html" class="active">AI Integrations</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="pill">03 // EMBEDDED AI SYSTEMS &amp; AUTONOMOUS AGENTS</div>
+        <h1>10x Your Team's Output With <span>Embedded AI Integrations.</span></h1>
+        <p>
+          Standard automations follow rigid rules—AI integrations handle unstructured human work. We embed frontier LLMs, vision extraction, and voice agents directly inside your existing software so your team never wastes another hour manually reading PDFs, triaging inboxes, or logging call notes.
+        </p>
+        <div class="savings-strip">
+          <div class="save-card">
+            <span class="save-val">95% Faster</span>
+            <span class="save-txt">Document, invoice, contract, and PDF processing—turning 20-minute manual reviews into 3 seconds.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">5x–10x Output</span>
+            <span class="save-txt">Each employee handles 5x more volume with AI drafting, triaging, and pre-validating their queue.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">24/7 Coverage</span>
+            <span class="save-txt">Voice &amp; inbox AI agents answer, qualify, and book appointments around the clock.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">DETAILED AI INTEGRATION CATALOG // PRACTICAL HIGH-ROI INTELLIGENCE</div>
+        <h2 class="sec-title">6 Ways Embedded AI Saves Thousands of Hours &amp; Dollars.</h2>
+        <p class="sec-desc">
+          We don't build gimmicks—we build production-grade AI pipelines that plug directly into your CRM, ERP, inbox, phone system, and databases.
+        </p>
+
+        <div class="uc-grid">
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 01</span>
+                <span class="uc-roi">SAVES 15–30 HRS/WK</span>
+              </div>
+              <h3>Intelligent Document Processing (PDF, Invoice &amp; Form Extraction)</h3>
+              <p>
+                Stop paying staff to read PDFs and type numbers into software. Our vision and LLM pipelines extract structured data from any document—even messy scans or handwritten forms.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Reads vendor invoices, purchase orders, bills of lading, and medical/legal forms</li>
+              <li>Validates totals, flags discrepancies, and writes clean rows to SQL/QuickBooks</li>
+              <li>Zero templates required—handles brand-new document layouts automatically</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 02</span>
+                <span class="uc-roi">2-SECOND RESPONSE TIME</span>
+              </div>
+              <h3>Autonomous Inbox, Ticket &amp; Lead Triage Agents</h3>
+              <p>
+                Turn shared inboxes (`info@`, `support@`, `quotes@`) into self-sorting engines that read every incoming email, attachments included, and take immediate action.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Classifies intent (Quote Request, Urgent Support, Billing, Spam) with 99% accuracy</li>
+              <li>Looks up the sender in your CRM/database and drafts a complete, accurate reply</li>
+              <li>Routes urgent issues to the right rep in Slack with a 3-bullet summary</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 03</span>
+                <span class="uc-roi">SAVES 5+ HRS/WK PER REP</span>
+              </div>
+              <h3>Voice AI, Call Intelligence &amp; Automatic CRM Logging</h3>
+              <p>
+                Sales reps and service coordinators hate manual CRM data entry. Our Voice AI listens to calls, extracts every detail, and updates your CRM automatically.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Transcribes phone/Zoom calls and populates custom CRM fields (Budget, Timeline, Pain Points)</li>
+              <li>Auto-generates follow-up emails and task checklists immediately after the call</li>
+              <li>24/7 inbound Voice AI receptionist to answer after-hours calls and book jobs</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 04</span>
+                <span class="uc-roi">90% FASTER TURNAROUND</span>
+              </div>
+              <h3>Automated Contract Review, Redlining &amp; Compliance Checks</h3>
+              <p>
+                Before anyone signs a vendor agreement, lease, or client MSA, our AI agent reviews every clause against your company's legal and operational playbook.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Flags risky indemnification, net-90 payment traps, or auto-renewal clauses</li>
+              <li>Suggests exact replacement wording aligned with your company standards</li>
+              <li>Extracts key dates and obligations directly into your compliance database</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 05</span>
+                <span class="uc-roi">SCALES WITHOUT HEADCOUNT</span>
+              </div>
+              <h3>Multi-Agent Research, Enrichment &amp; Outbound Workflows</h3>
+              <p>
+                Deploy coordinated teams of specialized AI agents that research prospects, monitor competitors, or enrich thousands of database records while you sleep.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Agent 1 researches company news &amp; tech stack → Agent 2 scores fit → Agent 3 drafts outreach</li>
+              <li>Monitors supplier websites, permit filings, or RFPs and alerts your sales team daily</li>
+              <li>Enriches 10,000+ sparse CRM leads with verified industry and size metadata</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">AI SYSTEM 06</span>
+                <span class="uc-roi">PROTECT YOUR MARGINS</span>
+              </div>
+              <h3>Predictive Anomaly Detection &amp; Margin Guardrails</h3>
+              <p>
+                Instead of discovering a costly mistake at the end of the quarter, AI monitors your live transactions, job costs, and pricing to catch leaks in real time.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Detects duplicate vendor billing, unusual labor overruns, or unbilled change orders</li>
+              <li>Identifies at-risk customers showing early signs of churn before they cancel</li>
+              <li>Recommends optimal pricing adjustments based on historical win/loss data</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="eyebrow">COMPLETE ECOSYSTEM // EXPLORE OUR OTHER CORE SERVICES</div>
+        <h2 class="sec-title">Unify Your AI Agents Inside a Centralized Company AI Brain.</h2>
+        <div class="cross-grid">
+          <a href="company-ai-brain.html" class="cross-card">
+            <h4>★ Company AI Brain &amp; DB Hub</h4>
+            <p>Our flagship platform: centralize all company knowledge, automate large databases, and train staff 70% faster.</p>
+            <span>Explore the Flagship AI Brain →</span>
+          </a>
+          <a href="custom-applications.html" class="cross-card">
+            <h4>01 // Custom Applications</h4>
+            <p>Custom client portals, internal dispatch hubs, and web apps with zero per-seat SaaS fees.</p>
+            <span>Explore Custom Apps →</span>
+          </a>
+          <a href="workflow-automations.html" class="cross-card">
+            <h4>02 // Workflow Automations</h4>
+            <p>Zero-touch API and webhook pipelines that connect your entire software stack 24/7.</p>
+            <span>Explore Automations →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="pill" style="margin-bottom: 12px;">DEPLOY HIGH-ROI AI</div>
+            <h2>Ready to Embed AI Into Your Workflow?</h2>
+            <p>Tell us what documents, emails, calls, or manual analysis your team spends too much time on—we’ll architect your custom AI integration.</p>
+          </div>
+          <form class="quick-form" id="project-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+            </div>
+            <select name="focus" aria-label="Primary Focus">
+              <option value="AI Integration &amp; Agents" selected>AI Integration &amp; Agents</option>
+              <option value="Company AI Brain">Company AI Brain</option>
+              <option value="Custom Application">Custom Application</option>
+              <option value="Workflow Automation">Workflow Automation</option>
+              <option value="Full Stack (App + Automation + AI)">Full Stack (App + Automation + AI)</option>
+            </select>
+            <textarea name="goal" rows="4" placeholder="Describe the documents, inbox, calls, or workflows you want AI to handle..." required></textarea>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">Request AI Blueprint →</button>
+            <div class="form-feedback" id="form-feedback">✓ Request received! We'll reach out shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/mvn-separate-badge-white.svg" alt="MVN Icon" />
+        <span>MODERN VISTAS NETWORK</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
+      </div>
+      <div>&copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('project-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
