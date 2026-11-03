@@ -43,6 +43,7 @@
     .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--navy); font-size: 14.5px; font-weight: 600; transition: color 0.2s ease; }
     .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .mobile-menu-toggle { display: none; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 14px;
@@ -177,6 +178,7 @@
       color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
     }
     .quick-form textarea { min-height: 105px; resize: vertical; }
+    .quick-form input::placeholder, .quick-form textarea::placeholder { color: #94A3B8; }
     .form-feedback { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--cyan); display: none; }
 
     footer { margin-top: auto; background: #FFFFFF; border-top: 1px solid var(--border); padding: 22px 0; }
@@ -188,33 +190,81 @@
 
     @media (max-width: 960px) {
       .savings-strip, .uc-grid, .comp-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
-      .navbar { height: auto; padding: 12px 0; flex-wrap: wrap; justify-content: space-between; gap: 10px 16px; }
-      .nav-menu { display: contents; }
-      .brand-link { order: 1; }
-      .nav-cta { order: 2; }
-      .nav-links { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; gap: 6px 16px; padding-top: 8px; border-top: 1px solid #F1F5F9; }
-      .nav-links a { font-size: 13px; }
-      .brand-logo { height: 46px; }
+      .navbar { height: 68px; padding: 0; justify-content: space-between; gap: 16px; }
+      .brand-logo { height: 42px; }
+      .mobile-menu-toggle {
+        display: inline-flex; flex-direction: column; justify-content: center; align-items: center;
+        gap: 5px; width: 42px; height: 42px; background: #F8FAFC; border: 1px solid var(--border);
+        border-radius: 10px; cursor: pointer; padding: 0; transition: all 0.2s ease;
+      }
+      .mobile-menu-toggle:hover { border-color: var(--navy); }
+      .mobile-menu-toggle .bar {
+        width: 20px; height: 2px; background: var(--navy); border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+      }
+      .mobile-menu-toggle.is-open { background: var(--navy); border-color: var(--navy); }
+      .mobile-menu-toggle.is-open .bar { background: var(--cyan); }
+      .mobile-menu-toggle.is-open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .mobile-menu-toggle.is-open .bar:nth-child(2) { opacity: 0; }
+      .mobile-menu-toggle.is-open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .nav-menu {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: #FFFFFF; border-bottom: 2px solid var(--cyan);
+        box-shadow: 0 18px 36px rgba(5, 19, 41, 0.14); padding: 14px 20px 20px;
+        flex-direction: column; align-items: stretch; gap: 10px; z-index: 110;
+      }
+      .nav-menu.is-open { display: flex; }
+      .nav-links { flex-direction: column; align-items: stretch; gap: 4px; width: 100%; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 11px 14px; border-radius: 9px; font-size: 15px; font-weight: 600; color: var(--navy);
+      }
+      .nav-links a:hover, .nav-links a.active { background: #F0F9FF; color: var(--teal); }
+      .nav-links a.active::after { content: "●"; font-size: 10px; color: var(--teal); }
+      .nav-cta { width: 100%; justify-content: center; padding: 12px 18px; font-size: 14px; margin-top: 4px; }
     }
     @media (max-width: 640px) {
       .container { padding: 0 16px; }
-      .navbar { padding: 10px 0; gap: 8px 10px; }
-      .brand-logo { height: 38px; max-width: 165px; }
-      .nav-links { gap: 6px 12px; }
-      .nav-links a { font-size: 12.5px; }
-      .nav-cta { padding: 9px 14px; font-size: 12.5px; }
-      .hide-mobile { display: none; }
+      .navbar { height: 62px; }
+      .brand-logo { height: 36px; max-width: 175px; }
+      .nav-menu { padding: 12px 16px 18px; }
+      .page-hero { padding: 28px 0 30px; }
+      .pill { font-size: 10px; letter-spacing: 1.2px; padding: 5px 10px; margin-bottom: 12px; }
+      .page-hero h1 { font-size: 26px; line-height: 1.15; margin-bottom: 10px; }
+      .page-hero p { font-size: 14.5px; margin-bottom: 18px; }
+      .savings-strip { gap: 10px; padding-top: 16px; }
+      .save-card { padding: 13px 14px; }
+      .save-val { font-size: 20px; }
+      .save-txt { font-size: 12.5px; }
+      .section { padding: 36px 0; }
+      .sec-title { font-size: 22px; }
+      .sec-desc { font-size: 14.5px; margin-bottom: 22px; }
+      .uc-grid { gap: 14px; }
+      .uc-card { padding: 18px 16px; }
+      .uc-top { flex-wrap: wrap; gap: 6px; }
+      .uc-card h3 { font-size: 17.5px; }
+      .comp-col { padding: 18px 16px; }
+      .cta-section { padding: 20px 0 36px; }
+      .cta-card { padding: 22px 16px; gap: 18px; }
+      .cta-card h2 { font-size: 21px; }
+      .quick-form { padding: 14px; }
       .form-row { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; text-align: center; }
-      .footer-links { flex-wrap: wrap; justify-content: center; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 12px; }
+      .footer-links { flex-wrap: wrap; justify-content: center; gap: 10px 16px; }
     }
   </style>
 </head>
 <body>
   <div class="navbar-wrap">
     <div class="container navbar">
-      <a href="index.html" class="brand-link"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
-      <div class="nav-menu">
+      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="company-ai-brain.html">Company AI Brain</a></li>
@@ -222,7 +272,7 @@
           <li><a href="workflow-automations.html">Automations</a></li>
           <li><a href="ai-integrations.html">AI Integrations</a></li>
         </ul>
-        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a Discovery Call →</a>
       </div>
     </div>
   </div>
@@ -439,6 +489,7 @@
               <input type="text" name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Work Email" required />
             </div>
+            <input type="tel" name="phone" placeholder="Phone Number" />
             <select name="focus" aria-label="Primary Focus">
               <option value="Custom Application" selected>Custom Application / Portal</option>
               <option value="Company AI Brain">Company AI Brain</option>
@@ -473,6 +524,30 @@
   </footer>
 
   <script>
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navMenu.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      navMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('is-open')) {
+          navMenu.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
     const form = document.getElementById('project-form');
     const feedback = document.getElementById('form-feedback');
     form.addEventListener('submit', (e) => {
