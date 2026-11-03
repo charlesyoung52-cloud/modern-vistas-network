@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://modernvistasnetwork.com/" />
   <meta property="og:title" content="Modern Vistas Network — Custom Apps, Automations &amp; AI Integrations" />
   <meta property="og:description" content="You Dream It, We Build It. Custom web applications, workflow automations, and centralized Company AI Brains." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/" />
   <meta property="og:url" content="https://modernvistasnetwork.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://modernvistasnetwork.com/assets/mvn-together-lockup-white.svg" />
@@ -311,7 +312,7 @@
     }
     .brain-subtitle {
       font-family: 'Chakra Petch', sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--navy);
       text-transform: uppercase;
@@ -322,39 +323,76 @@
     .pipeline-steps {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       width: 100%;
     }
     .pipe-node {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 11px 14px;
+      padding: 9px 12px;
       border-radius: 10px;
       background: var(--bg);
       border: 1px solid var(--border);
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--navy);
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+    .pipe-node:hover {
+      border-color: rgba(18, 202, 255, 0.45);
+      background: #F0F9FF;
     }
     .pipe-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
+      min-width: 0;
+      flex: 1;
+    }
+    .pipe-left span:last-child {
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .pipe-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
-      padding: 3px 7px;
+      padding: 2.5px 6px;
       border-radius: 5px;
       background: var(--navy);
       color: var(--cyan);
+      flex-shrink: 0;
+      letter-spacing: 0.4px;
     }
     .pipe-state {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 10.5px;
+      font-weight: 700;
       color: var(--teal);
+      background: rgba(18, 202, 255, 0.08);
+      border: 1px solid rgba(18, 202, 255, 0.22);
+      padding: 3.5px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 90px;
+      justify-content: flex-start;
+    }
+    .pipe-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 6px rgba(18, 202, 255, 0.7);
+      display: inline-block;
+      flex-shrink: 0;
     }
     .pipe-output {
       margin-top: 12px;
@@ -370,9 +408,9 @@
       color: var(--cyan);
     }
     .brain-roi-box {
-      margin-top: 14px;
+      margin-top: 11px;
       width: 100%;
-      padding: 12px 14px;
+      padding: 11px 13px;
       border-radius: 10px;
       background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
       border: 1px solid rgba(0, 168, 204, 0.3);
@@ -380,23 +418,25 @@
     }
     .brain-roi-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 700;
       color: var(--teal);
       letter-spacing: 0.8px;
       text-transform: uppercase;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .brain-roi-text {
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--navy);
       line-height: 1.45;
       font-weight: 500;
     }
     .brain-card-cta {
-      margin-top: 12px;
+      margin-top: 10px;
       width: 100%;
+      padding: 10px 16px;
+      font-size: 13.5px;
     }
     /* THREE PILLARS SECTION */
     .pillars {
@@ -881,28 +921,37 @@
         gap: 7px;
       }
       .pipe-node {
-        padding: 9px 10px;
+        padding: 8px 10px;
         font-size: 11.5px;
-        gap: 6px;
+        gap: 8px;
       }
       .pipe-left {
         gap: 7px;
         min-width: 0;
       }
       .pipe-left span:last-child {
+        font-size: 11px;
         line-height: 1.25;
       }
       .pipe-state {
-        font-size: 9.5px;
+        font-size: 9px;
+        padding: 3px 6px;
+        gap: 5px;
+        min-width: auto;
         white-space: nowrap;
         flex-shrink: 0;
       }
+      .pipe-dot {
+        width: 5px;
+        height: 5px;
+      }
       .brain-roi-box {
-        padding: 10px 12px;
-        margin-top: 12px;
+        padding: 9px 11px;
+        margin-top: 10px;
       }
       .brain-roi-text {
-        font-size: 12px;
+        font-size: 11.5px;
+        line-height: 1.4;
       }
       .pillars {
         padding: 12px 0 32px;
@@ -1022,37 +1071,37 @@
               <div class="pipe-node">
                 <div class="pipe-left">
                   <span class="pipe-badge">01</span>
-                  <span>Employee Chatbot: Training Questions &amp; FAQs</span>
+                  <span>Employee Chatbot: Training &amp; SOP FAQs</span>
                 </div>
-                <span class="pipe-state">TRAINING ●</span>
+                <span class="pipe-state"><span class="pipe-dot"></span>TRAINING</span>
               </div>
               <div class="pipe-node">
                 <div class="pipe-left">
                   <span class="pipe-badge">02</span>
                   <span>24/7 Customer Support &amp; FAQ Chatbot</span>
                 </div>
-                <span class="pipe-state">24/7 LIVE ●</span>
+                <span class="pipe-state"><span class="pipe-dot"></span>24/7 LIVE</span>
               </div>
               <div class="pipe-node">
                 <div class="pipe-left">
                   <span class="pipe-badge">03</span>
-                  <span>Live Dashboard for Team Integration &amp; Interaction</span>
+                  <span>Live Dashboard: Team Integration Hub</span>
                 </div>
-                <span class="pipe-state">TEAM HUB ●</span>
+                <span class="pipe-state"><span class="pipe-dot"></span>TEAM HUB</span>
               </div>
               <div class="pipe-node">
                 <div class="pipe-left">
                   <span class="pipe-badge">04</span>
-                  <span>Neural Network Inquiries &amp; Investigations</span>
+                  <span>Neural Network Inquiries &amp; Audits</span>
                 </div>
-                <span class="pipe-state">DEEP AUDIT ●</span>
+                <span class="pipe-state"><span class="pipe-dot"></span>DEEP AUDIT</span>
               </div>
               <div class="pipe-node">
                 <div class="pipe-left">
                   <span class="pipe-badge">05</span>
-                  <span>Branded Docs, Reports &amp; Auto-Database Sync</span>
+                  <span>Auto Database Sync &amp; Branded Reports</span>
                 </div>
-                <span class="pipe-state">SYNCED ●</span>
+                <span class="pipe-state"><span class="pipe-dot"></span>SYNCED</span>
               </div>
             </div>
             <div class="brain-roi-box">
