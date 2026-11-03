@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company AI Brain &amp; Autonomous Database Hub — Modern Vistas Network</title>
+  <meta name="description" content="Centralize your company's knowledge, automate large-scale database creation and updates with zero manual labor, train employees 70% faster, and deploy 24/7 intelligent agents." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/company-ai-brain.html" />
+  <meta property="og:title" content="Company AI Brain &amp; Autonomous Database Hub — Modern Vistas Network" />
+  <meta property="og:description" content="One centralized intelligence layer that builds and updates large databases automatically, trains staff, answers customer FAQs 24/7, and connects your entire stack." />
+  <meta property="og:url" content="https://modernvistasnetwork.com/company-ai-brain.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://modernvistasnetwork.com/assets/mvn-together-lockup-white.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --navy: #051329;
+      --navy-deep: #030B18;
+      --navy-light: #0D2342;
+      --cyan: #12CAFF;
+      --cyan-soft: rgba(18, 202, 255, 0.14);
+      --teal: #00A8CC;
+      --emerald: #10B981;
+      --text: #051329;
+      --muted: #52637A;
+      --border: #E2E8F0;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+    /* NAVBAR */
+    .navbar-wrap {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 84px;
+      gap: 44px;
+    }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .brand-logo {
+      height: 54px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 14.5px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--teal);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1.5px solid transparent;
+    }
+    .btn-primary {
+      background: var(--navy);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(5, 19, 41, 0.12);
+    }
+    .btn-primary:hover {
+      background: var(--navy-light);
+      transform: translateY(-1px);
+    }
+    .btn-cyan {
+      background: var(--cyan);
+      color: var(--navy);
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 18px rgba(18, 202, 255, 0.35);
+    }
+    .btn-cyan:hover {
+      background: #33D3FF;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(18, 202, 255, 0.5);
+    }
+    .btn-ghost-light {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-ghost-light:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: var(--cyan);
+    }
+
+    /* IMMERSIVE DARK HERO */
+    .brain-hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(18, 202, 255, 0.22), transparent 42%),
+        radial-gradient(circle at 15% 85%, rgba(0, 168, 204, 0.18), transparent 40%),
+        linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, #091E3A 100%);
+      color: #FFFFFF;
+      padding: 64px 0 56px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--cyan);
+    }
+    .brain-hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .breadcrumb-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--cyan);
+      padding: 6px 14px;
+      border-radius: 7px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 16px rgba(18, 202, 255, 0.3);
+    }
+    .brain-hero h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(32px, 4.4vw, 52px);
+      font-weight: 700;
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+    .brain-hero h1 .cyan-glow {
+      color: var(--cyan);
+      text-shadow: 0 0 28px rgba(18, 202, 255, 0.35);
+    }
+    .brain-hero-lead {
+      font-size: 17px;
+      color: #CBD5E1;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .roi-stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .roi-stat {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(18, 202, 255, 0.22);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .roi-stat-val {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .roi-stat-lbl {
+      font-size: 11.5px;
+      color: #E2E8F0;
+      line-height: 1.35;
+      display: block;
+    }
+
+    /* RIGHT HERO BRAIN CORE CARD */
+    .brain-core-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(18, 202, 255, 0.35);
+      border-radius: 22px;
+      padding: 26px 22px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      text-align: center;
+    }
+    .core-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+    .core-tag {
+      color: var(--cyan);
+      background: rgba(18, 202, 255, 0.14);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .core-live {
+      color: #34D399;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .core-live::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981;
+    }
+    .core-img-wrap {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 30px rgba(18, 202, 255, 0.2);
+    }
+    .core-img-wrap img {
+      max-width: 145px;
+      height: auto;
+      display: block;
+      margin: 0 auto 6px;
+    }
+    .core-img-title {
+      font-family: 'Chakra Petch', sans-serif;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .core-telemetry-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: left;
+    }
+    .telemetry-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(5, 19, 41, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 12.5px;
+      color: #F8FAFC;
+    }
+    .telemetry-item span:last-child {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* SECTION STYLING */
+    .section {
+      padding: 60px 0;
+    }
+    .section-alt {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-dark {
+      background: var(--navy);
+      color: #FFFFFF;
+    }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .section-dark .eyebrow {
+      color: var(--cyan);
+    }
+    .sec-title {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .section-dark .sec-title {
+      color: #FFFFFF;
+    }
+    .sec-desc {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+    .section-dark .sec-desc {
+      color: #CBD5E1;
+    }
+
+    /* FLAGSHIP DATABASE AUTOMATION SPOTLIGHT */
+    .db-spotlight-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-bottom: 32px;
+    }
+    .db-feature-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .db-feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(18, 202, 255, 0.24);
+      border-radius: 16px;
+      padding: 20px 22px;
+      transition: border-color 0.2s ease;
+    }
+    .db-feature-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .db-step-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--cyan);
+      color: var(--navy);
+      padding: 4px 9px;
+      border-radius: 6px;
+    }
+    .db-feature-card h3 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 18px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+    .db-feature-card p {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.55;
+    }
+
+    /* LIVE DATABASE ENGINE VISUALIZER */
+    .db-engine-visual {
+      background: #030B18;
+      border: 1px solid rgba(18, 202, 255, 0.4);
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .engine-window-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--cyan);
+    }
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .window-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .window-dots span:first-child { background: #EF4444; }
+    .window-dots span:nth-child(2) { background: #F59E0B; }
+    .window-dots span:nth-child(3) { background: #10B981; }
+    .pipeline-flow-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .flow-stage {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 11px;
+      padding: 13px 15px;
+    }
+    .flow-stage-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .flow-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .flow-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      background: rgba(18, 202, 255, 0.12);
+      color: #E2E8F0;
+      border: 1px solid rgba(18, 202, 255, 0.25);
+      padding: 4px 8px;
+      border-radius: 5px;
+    }
+    .sql-preview {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: #A7F3D0;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 8px;
+      padding: 10px 12px;
+      line-height: 1.5;
+    }
+    .before-after-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .ba-box {
+      padding: 16px 18px;
+      border-radius: 12px;
+      font-size: 13.5px;
+    }
+    .ba-old {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #FECACA;
+    }
+    .ba-new {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #D1FAE5;
+    }
+    .ba-box strong {
+      display: block;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #FFFFFF;
+    }
+
+    /* INTERACTIVE SIMULATOR TABS */
+    .sim-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 16px 40px rgba(5, 19, 41, 0.06);
+    }
+    .sim-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sim-tab {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--navy);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .sim-tab:hover {
+      border-color: var(--teal);
+    }
+    .sim-tab.active {
+      background: var(--navy);
+      color: var(--cyan);
+      border-color: var(--navy);
+      box-shadow: 0 6px 16px rgba(5, 19, 41, 0.15);
+    }
+    .sim-pane {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .sim-pane.active {
+      display: grid;
+    }
+    .sim-chat-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .chat-bubble-user {
+      align-self: flex-end;
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 12px 16px;
+      border-radius: 14px 14px 3px 14px;
+      font-size: 13.5px;
+      max-width: 90%;
+    }
+    .chat-bubble-ai {
+      align-self: flex-start;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--cyan);
+      color: var(--navy);
+      padding: 14px 16px;
+      border-radius: 3px 14px 14px 14px;
+      font-size: 13.5px;
+      max-width: 95%;
+      box-shadow: 0 4px 12px rgba(5, 19, 41, 0.04);
+    }
+    .chat-bubble-ai strong {
+      color: var(--teal);
+    }
+    .sim-impact-box {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sim-impact-box h4 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 19px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .sim-impact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #E2E8F0;
+      margin-bottom: 18px;
+    }
+    .sim-impact-list li::before {
+      content: "✓ ";
+      color: var(--cyan);
+      font-weight: 700;
+    }
+    .sim-savings-badge {
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #A7F3D0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* 8 EXPANSIVE USE CASES GRID */
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .uc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(5, 19, 41, 0.03);
+    }
+    .uc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .uc-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--navy);
+      color: var(--cyan);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .uc-roi-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      background: #ECFDF5;
+      color: #047857;
+      border: 1px solid #A7F3D0;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .uc-card h3 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .uc-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .uc-examples {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-top: 12px;
+      border-top: 1px solid #F1F5F9;
+      font-size: 13px;
+      color: var(--navy);
+    }
+    .uc-examples li::before {
+      content: "→ ";
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* EXPECTATIONS & ROLLOUT BLUEPRINT */
+    .blueprint-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--cyan);
+      border-radius: 14px;
+      padding: 20px 18px;
+    }
+    .step-phase {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .step-card h4 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .security-banner {
+      background: linear-gradient(135deg, #051329 0%, #0D2342 100%);
+      color: #FFFFFF;
+      border-radius: 18px;
+      padding: 28px 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      border: 1px solid rgba(18, 202, 255, 0.3);
+    }
+    .sec-guarantee h4 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 16px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .sec-guarantee p {
+      font-size: 13px;
+      color: #CBD5E1;
+    }
+
+    /* OTHER SERVICES CROSS-NAV */
+    .cross-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .cross-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      text-decoration: none;
+      color: var(--navy);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cross-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(5, 19, 41, 0.07);
+    }
+    .cross-card h4 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 17px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .cross-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .cross-link-lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      padding: 16px 0 60px;
+    }
+    .cta-card {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: center;
+      box-shadow: 0 18px 42px rgba(5, 19, 41, 0.16);
+    }
+    .cta-card h2 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .cta-card p {
+      color: #CBD5E1;
+      font-size: 14.5px;
+    }
+    .quick-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px;
+      border-radius: 14px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .quick-form input,
+    .quick-form select,
+    .quick-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(5, 19, 41, 0.75);
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      outline: none;
+    }
+    .quick-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .quick-form input::placeholder,
+    .quick-form textarea::placeholder {
+      color: #94A3B8;
+    }
+    .form-feedback {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: var(--cyan);
+      display: none;
+      margin-top: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: auto;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      padding: 22px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.8px;
+    }
+    .footer-brand img {
+      height: 32px;
+      width: auto;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      color: var(--navy);
+    }
+
+    @media (max-width: 960px) {
+      .brain-hero-grid,
+      .db-spotlight-grid,
+      .sim-pane.active,
+      .use-cases-grid,
+      .blueprint-grid,
+      .security-banner,
+      .cross-nav-grid,
+      .cta-card {
+        grid-template-columns: 1fr;
+      }
+      .roi-stat-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
+      .navbar {
+        height: 68px;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .brand-logo {
+        height: 38px;
+        max-width: 165px;
+      }
+      .nav-cta {
+        padding: 9px 14px;
+        font-size: 12.5px;
+      }
+      .hide-mobile {
+        display: none;
+      }
+      .brain-hero {
+        padding: 36px 0 36px;
+      }
+      .roi-stat-strip,
+      .before-after-bar,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 40px 0;
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP NAVIGATION -->
+  <div class="navbar-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home">
+        <img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" />
+      </a>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company-ai-brain.html" class="active">Company AI Brain</a></li>
+          <li><a href="custom-applications.html">Custom Apps</a></li>
+          <li><a href="workflow-automations.html">Automations</a></li>
+          <li><a href="ai-integrations.html">AI Integrations</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a <span class="hide-mobile">Discovery </span>Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- IMMERSIVE DARK HERO -->
+    <section class="brain-hero">
+      <div class="container brain-hero-grid">
+        <div>
+          <div class="breadcrumb-pill">FLAGSHIP ARCHITECTURE // CENTRALIZED INTELLIGENCE</div>
+          <h1>
+            The Centralized <span class="cyan-glow">Company AI Brain</span> &amp; Autonomous Database Hub.
+          </h1>
+          <p class="brain-hero-lead">
+            Imagine one private, all-knowing intelligence layer connected to every document, SOP, database, CRM, and workflow in your business. It builds and updates massive databases without manual labor, trains new employees in a fraction of the time, answers customer questions 24/7, and gives executives live financial and operational clarity on command.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#database-engine" class="btn btn-cyan">See Zero-Labor Database Automation ↓</a>
+            <a href="#simulator" class="btn btn-ghost-light">Try Interactive Use-Case Explorer</a>
+          </div>
+          <div class="roi-stat-strip">
+            <div class="roi-stat">
+              <span class="roi-stat-val">15–35+ Hrs</span>
+              <span class="roi-stat-lbl">Saved weekly per team on search &amp; data entry</span>
+            </div>
+            <div class="roi-stat">
+              <span class="roi-stat-val">70% Faster</span>
+              <span class="roi-stat-lbl">New-hire onboarding &amp; SOP mastery</span>
+            </div>
+            <div class="roi-stat">
+              <span class="roi-stat-val">100% Auto</span>
+              <span class="roi-stat-lbl">Large database creation, enrichment &amp; upkeep</span>
+            </div>
+            <div class="roi-stat">
+              <span class="roi-stat-val">24/7 Live</span>
+              <span class="roi-stat-lbl">Instant internal &amp; customer FAQ resolution</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CORE VISUAL -->
+        <div class="brain-core-panel">
+          <div class="core-top-bar">
+            <span class="core-tag">NEURAL COMMAND CORE</span>
+            <span class="core-live">ALL SYSTEMS SYNCED</span>
+          </div>
+          <div class="core-img-wrap">
+            <img src="assets/ai-company-brain.svg" alt="Centralized Company AI Brain" />
+            <div class="core-img-title">Private RAG + SQL + Action Agents</div>
+          </div>
+          <div class="core-telemetry-list">
+            <div class="telemetry-item">
+              <span>01 • Autonomous Database Creation &amp; Sync</span>
+              <span>ZERO MANUAL ENTRY ●</span>
+            </div>
+            <div class="telemetry-item">
+              <span>02 • Employee Training &amp; Interactive SOPs</span>
+              <span>ROLE-AWARE ●</span>
+            </div>
+            <div class="telemetry-item">
+              <span>03 • Internal Knowledge &amp; Instant Document Search</span>
+              <span>CITED SOURCES ●</span>
+            </div>
+            <div class="telemetry-item">
+              <span>04 • 24/7 Customer Support &amp; Booking Chatbot</span>
+              <span>LIVE TRIAGE ●</span>
+            </div>
+            <div class="telemetry-item">
+              <span>05 • Natural-Language Executive BI &amp; Dashboards</span>
+              <span>REAL-TIME SQL ●</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTERPIECE: CREATING & AUTOMATING LARGE DATABASES WITHOUT MANUAL LABOR -->
+    <section class="section section-dark" id="database-engine">
+      <div class="container">
+        <div class="eyebrow">ZERO-LABOR DATA ENGINEERING // MASSIVE TIME &amp; PAYROLL SAVINGS</div>
+        <h2 class="sec-title">Create, Enrich &amp; Automate Large Databases Without Manual Labor.</h2>
+        <p class="sec-desc">
+          Most companies bleed thousands of hours and tens of thousands of dollars paying staff to manually read PDFs, copy-paste rows between spreadsheets, update CRM fields, and clean up outdated vendor or inventory catalogs. Your Company AI Brain turns database creation and ongoing maintenance into a <strong>100% autonomous pipeline</strong>.
+        </p>
+
+        <div class="db-spotlight-grid">
+          <div class="db-feature-stack">
+            <div class="db-feature-card">
+              <div class="db-feature-head">
+                <span class="db-step-badge">CAPABILITY 01</span>
+                <h3>Build Massive Databases From Raw, Unstructured Chaos</h3>
+              </div>
+              <p>
+                Have 10,000 legacy PDFs, vendor price lists, scanned invoices, old spreadsheets, email threads, or call recordings? The AI Brain reads every file, extracts exact structured fields (SKUs, pricing, contract terms, contacts, serial numbers, compliance dates), normalizes formats, and populates a clean SQL, Postgres, Airtable, or CRM database automatically.
+              </p>
+            </div>
+
+            <div class="db-feature-card">
+              <div class="db-feature-head">
+                <span class="db-step-badge">CAPABILITY 02</span>
+                <h3>Continuous Event-Driven Database Updates (Zero Copy-Paste)</h3>
+              </div>
+              <p>
+                Whenever a supplier emails a new price sheet, a client submits an intake form, a technician logs a voice note from a job site, or a webhook fires from Stripe/QuickBooks, your AI Brain automatically parses the change, matches the existing record, updates the exact rows across all connected databases, and logs a timestamped audit trail.
+              </p>
+            </div>
+
+            <div class="db-feature-card">
+              <div class="db-feature-head">
+                <span class="db-step-badge">CAPABILITY 03</span>
+                <h3>"Command Your Database" in Plain English</h3>
+              </div>
+              <p>
+                Stop writing complex queries or clicking through 500 records one by one. Tell your Company AI Brain: <em>"Ingest this 80-page Q4 supplier catalog, update all unit costs in our database, recalculate gross margins, and flag any item that dropped below 30% margin."</em> What used to take an analyst 3 days finishes in 12 seconds.
+              </p>
+            </div>
+
+            <div class="db-feature-card">
+              <div class="db-feature-head">
+                <span class="db-step-badge">CAPABILITY 04</span>
+                <h3>Self-Healing Data Hygiene, Deduplication &amp; Web Enrichment</h3>
+              </div>
+              <p>
+                Your AI Brain continuously scans your large databases for duplicate accounts, missing phone numbers, expired insurance certificates, or conflicting pricing—automatically merging duplicates, enriching missing company data via APIs, and alerting your team only when human approval is needed.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: VISUAL PIPELINE DIAGRAM -->
+          <div class="db-engine-visual">
+            <div>
+              <div class="engine-window-bar">
+                <div class="window-dots"><span></span><span></span><span></span></div>
+                <span>AUTONOMOUS_DB_PIPELINE // LIVE EXECUTION</span>
+              </div>
+
+              <div class="pipeline-flow-box">
+                <div class="flow-stage">
+                  <div class="flow-stage-label">
+                    <span>1. Raw Unstructured Inputs</span>
+                    <span>24/7 INGESTION</span>
+                  </div>
+                  <div class="flow-pills">
+                    <span class="flow-pill">PDF Invoices &amp; Catalogs</span>
+                    <span class="flow-pill">Emails &amp; Attachments</span>
+                    <span class="flow-pill">Messy CSVs / Excel</span>
+                    <span class="flow-pill">Voice Notes &amp; Calls</span>
+                    <span class="flow-pill">Webhooks &amp; Forms</span>
+                  </div>
+                </div>
+
+                <div class="flow-stage">
+                  <div class="flow-stage-label">
+                    <span>2. AI Brain Extraction &amp; Validation Engine</span>
+                    <span>99.9% ACCURACY</span>
+                  </div>
+                  <div class="flow-pills">
+                    <span class="flow-pill">OCR + Vision Parsing</span>
+                    <span class="flow-pill">Schema Mapping</span>
+                    <span class="flow-pill">Fuzzy Deduplication</span>
+                    <span class="flow-pill">Margin &amp; Rule Checks</span>
+                  </div>
+                </div>
+
+                <div class="flow-stage">
+                  <div class="flow-stage-label">
+                    <span>3. Production Databases Auto-Updated</span>
+                    <span>INSTANT SYNC</span>
+                  </div>
+                  <div class="flow-pills">
+                    <span class="flow-pill">PostgreSQL / MySQL</span>
+                    <span class="flow-pill">HubSpot / Salesforce</span>
+                    <span class="flow-pill">Airtable / Notion</span>
+                    <span class="flow-pill">QuickBooks / Stripe</span>
+                    <span class="flow-pill">Vector RAG Index</span>
+                  </div>
+                </div>
+
+                <div class="sql-preview">
+                  &gt; BRAIN_AGENT: Parsed "2026_Vendor_Master_Catalog.pdf" (142 pages)<br/>
+                  &gt; EXTRACTED: 4,820 SKUs • 612 price updates • 38 new products<br/>
+                  &gt; DB_COMMIT: Updated PostgreSQL `inventory_master` &amp; synced HubSpot products in 4.2s.<br/>
+                  &gt; LABOR SAVED: ~34 hours of manual data entry eliminated.
+                </div>
+              </div>
+            </div>
+
+            <div class="before-after-bar">
+              <div class="ba-box ba-old">
+                <strong>✗ Without Company AI Brain</strong>
+                20–40 hrs/week spent manually entering data, outdated CRM records, costly spreadsheet typos, and delayed quotes.
+              </div>
+              <div class="ba-box ba-new">
+                <strong>✓ With Company AI Brain</strong>
+                Zero manual data entry, 100,000+ records kept spotless in real time, and instant natural-language database updates.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEPARTMENT SIMULATOR -->
+    <section class="section" id="simulator">
+      <div class="container">
+        <div class="eyebrow">INTERACTIVE LIVE EXAMPLES // SEE IT IN ACTION</div>
+        <h2 class="sec-title">How Every Department Uses the Company AI Brain Daily.</h2>
+        <p class="sec-desc">
+          Click any operational area below to see the exact prompts your team or customers can ask—and how the Brain saves hours of manual work on every single interaction.
+        </p>
+
+        <div class="sim-wrapper">
+          <div class="sim-tabs" role="tablist">
+            <button class="sim-tab active" data-tab="tab-db">01 • Database Auto-Update</button>
+            <button class="sim-tab" data-tab="tab-train">02 • Employee Training &amp; SOPs</button>
+            <button class="sim-tab" data-tab="tab-support">03 • 24/7 Customer Chatbot</button>
+            <button class="sim-tab" data-tab="tab-exec">04 • Executive Live Metrics</button>
+            <button class="sim-tab" data-tab="tab-quotes">05 • Instant Proposals &amp; RFPs</button>
+          </div>
+
+          <!-- Pane 1: Database -->
+          <div class="sim-pane active" id="tab-db">
+            <div class="sim-chat-box">
+              <div class="chat-bubble-user">
+                "Here are 18 vendor PDF invoices and our new regional rate sheet. Add any new vendors to the master database, update SKU unit costs, and flag any line item that increased more than 5%."
+              </div>
+              <div class="chat-bubble-ai">
+                <strong>✓ Database Sync Complete (3.8 seconds):</strong><br/>
+                • Parsed <strong>18 PDF invoices</strong> (314 line items total).<br/>
+                • Created <strong>2 new vendor profiles</strong> in PostgreSQL &amp; QuickBooks with W-9 metadata.<br/>
+                • Updated <strong>289 SKU costs</strong> in the master product table.<br/>
+                • <strong>⚠️ 4 SKUs flagged</strong> for &gt;5% price jump (Vendor #104: Copper Fittings +8.4%). Ready to send renegotiation email?
+              </div>
+            </div>
+            <div class="sim-impact-box">
+              <div>
+                <h4>Massive Database &amp; Back-Office Impact</h4>
+                <ul class="sim-impact-list">
+                  <li>Eliminates manual invoice keying and line-item spreadsheet comparisons.</li>
+                  <li>Catches vendor overcharges and margin erosion the second an invoice arrives.</li>
+                  <li>Keeps SQL, ERP, CRM, and accounting tables 100% identical without human touch.</li>
+                </ul>
+              </div>
+              <div class="sim-savings-badge">
+                💰 ROI IMPACT: Saves 15–30 hrs/week of manual back-office data entry &amp; prevents 3–5% margin leakage.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Training -->
+          <div class="sim-pane" id="tab-train">
+            <div class="sim-chat-box">
+              <div class="chat-bubble-user">
+                "I'm a new project coordinator on my second day. Walk me through how we onboard a commercial client after they sign the proposal, and quiz me on the required compliance docs."
+              </div>
+              <div class="chat-bubble-ai">
+                <strong>Welcome aboard! Here is our 4-step Commercial Onboarding SOP (from SOP-204, p. 3):</strong><br/>
+                1. Verify signed MSA &amp; COI in HubSpot (`Deal Stage: Closed Won`).<br/>
+                2. Trigger the automated folder provisioning workflow.<br/>
+                3. Collect W-9, Tax Exemption Cert, and Site Access Form.<br/>
+                4. Schedule Kickoff Call within 48 hours.<br/><br/>
+                <strong>Quick Check #1:</strong> Which two documents must be verified before engineering starts?
+              </div>
+            </div>
+            <div class="sim-impact-box">
+              <div>
+                <h4>70% Faster Employee Onboarding &amp; Coaching</h4>
+                <ul class="sim-impact-list">
+                  <li>New hires learn interactively from your real handbooks, Loom videos, and SOPs.</li>
+                  <li>Senior employees stop getting interrupted 20 times a day with repetitive questions.</li>
+                  <li>Tracks training progress and highlights where employees need extra coaching.</li>
+                </ul>
+              </div>
+              <div class="sim-savings-badge">
+                ⏱️ ROI IMPACT: Cuts new-hire ramp time from months to weeks &amp; saves managers 8+ hrs/week.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Customer Support -->
+          <div class="sim-pane" id="tab-support">
+            <div class="sim-chat-box">
+              <div class="chat-bubble-user">
+                "Hi, I need to check the status of Order #MV-4829, see if it's compatible with our Model X controller, and reschedule delivery to Thursday afternoon."
+              </div>
+              <div class="chat-bubble-ai">
+                <strong>I've checked your live account &amp; engineering specs:</strong><br/>
+                • <strong>Order #MV-4829:</strong> Packed and staged at our Dallas hub.<br/>
+                • <strong>Compatibility:</strong> Yes—fully compatible with Model X (requires Firmware v2.4+, link attached).<br/>
+                • <strong>Delivery Rescheduled:</strong> Updated in our dispatch database to <strong>Thursday, 1:00 PM – 4:00 PM</strong>. Confirmation SMS sent!
+              </div>
+            </div>
+            <div class="sim-impact-box">
+              <div>
+                <h4>24/7 Customer Support That Actually Takes Action</h4>
+                <ul class="sim-impact-list">
+                  <li>Not a dumb decision-tree bot—it checks live order databases, technical manuals, and scheduling calendars.</li>
+                  <li>Resolves 70–85% of customer inquiries instantly at 2:00 AM or during peak rush.</li>
+                  <li>Escalates complex edge cases to human reps with a complete summary.</li>
+                </ul>
+              </div>
+              <div class="sim-savings-badge">
+                🚀 ROI IMPACT: Saves $3,000–$8,000+/mo in support overhead while boosting lead conversion &amp; CSAT.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4: Executive BI -->
+          <div class="sim-pane" id="tab-exec">
+            <div class="sim-chat-box">
+              <div class="chat-bubble-user">
+                "Compare our net profit margin by service line over the last 90 days, show which 3 clients have overdue invoices over $5,000, and draft polite payment reminders."
+              </div>
+              <div class="chat-bubble-ai">
+                <strong>Live 90-Day Executive Snapshot (Pulled from QuickBooks + CRM + Job DB):</strong><br/>
+                • <strong>Commercial Installations:</strong> $412,000 rev | <strong>44.2% Net Margin</strong> (+3.1%)<br/>
+                • <strong>Maintenance Contracts:</strong> $198,000 rev | <strong>61.8% Net Margin</strong> (+5.4%)<br/>
+                • <strong>Overdue &gt;$5k:</strong> Apex Logistics ($14,200 • 18 days), Summit Group ($8,500 • 12 days), Vanguard Co ($6,100 • 9 days).<br/>
+                <strong>→ 3 tailored follow-up emails drafted and queued for your 1-click approval.</strong>
+              </div>
+            </div>
+            <div class="sim-impact-box">
+              <div>
+                <h4>Instant Executive Clarity Without Waiting on Reports</h4>
+                <ul class="sim-impact-list">
+                  <li>Ask questions in plain English across Stripe, QuickBooks, CRM, and SQL databases.</li>
+                  <li>No more waiting until the 15th of next month for manual spreadsheet rollups.</li>
+                  <li>Go straight from insight to action (send reminders, adjust pricing, alert managers).</li>
+                </ul>
+              </div>
+              <div class="sim-savings-badge">
+                📊 ROI IMPACT: Reclaims 10+ hrs/week of executive &amp; analyst reporting time and accelerates cash collection.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 5: Proposals -->
+          <div class="sim-pane" id="tab-quotes">
+            <div class="sim-chat-box">
+              <div class="chat-bubble-user">
+                "Generate a scoped proposal and line-item estimate for Acme Corp based on today's discovery call transcript and our 2026 enterprise pricing matrix."
+              </div>
+              <div class="chat-bubble-ai">
+                <strong>✓ Proposal &amp; Quote Generated (#PROP-2026-89):</strong><br/>
+                • Extracted 6 core requirements from your 42-minute call transcript.<br/>
+                • Matched exact labor &amp; material tiers from your 2026 Pricing Database.<br/>
+                • Referenced 2 similar past case studies in the same industry.<br/>
+                • Created branded PDF proposal + HubSpot Deal (`$48,500` • `47% margin`).
+              </div>
+            </div>
+            <div class="sim-impact-box">
+              <div>
+                <h4>Send Winning Proposals in 2 Minutes Instead of 2 Days</h4>
+                <ul class="sim-impact-list">
+                  <li>Turns discovery call transcripts and intake notes into accurate, on-brand SOWs.</li>
+                  <li>Enforces pricing guardrails so reps never accidentally underquote a project.</li>
+                  <li>Dramatically increases close rates by getting proposals in the client's inbox immediately.</li>
+                </ul>
+              </div>
+              <div class="sim-savings-badge">
+                ⚡ ROI IMPACT: Cuts quoting time by 90% &amp; increases deal win rates through same-day turnaround.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 EXPANSIVE USE CASES MATRIX -->
+    <section class="section section-alt" id="use-cases">
+      <div class="container">
+        <div class="eyebrow">EXHAUSTIVE CAPABILITIES // ONE BRAIN, INFINITE LEVERAGE</div>
+        <h2 class="sec-title">8 High-ROI Ways the Company AI Brain Transforms Your Business.</h2>
+        <p class="sec-desc">
+          Unlike generic chatbots that know nothing about your business, your Company AI Brain is custom-engineered around your private databases, documents, and APIs.
+        </p>
+
+        <div class="use-cases-grid">
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">01 // DATABASE AUTOMATION</span>
+                <span class="uc-roi-pill">SAVES 20–40 HRS/WK</span>
+              </div>
+              <h3>Automated Large Database Creation &amp; Upkeep</h3>
+              <p>
+                Construct and maintain massive relational and vector databases (10,000 to 1,000,000+ rows) from unstructured documents, emails, and feeds without manual data entry.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Auto-ingest vendor catalogs, PDF invoices, and rate sheets into SQL/ERP tables</li>
+              <li>Real-time two-way CRM, inventory, and accounting database synchronization</li>
+              <li>Automated deduplication, schema validation, and missing-field enrichment</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">02 // EMPLOYEE TRAINING</span>
+                <span class="uc-roi-pill">70% FASTER RAMP</span>
+              </div>
+              <h3>Interactive Employee Onboarding &amp; Role Coach</h3>
+              <p>
+                Turn static company handbooks, training videos, and SOPs into an interactive 24/7 mentor that teaches new hires step-by-step and tests their knowledge.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Role-specific onboarding paths for sales, ops, field techs, and support</li>
+              <li>Interactive Q&amp;A with exact citations to company manuals and Loom videos</li>
+              <li>Simulated customer role-play and automated competency quizzes</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">03 // INTERNAL KNOWLEDGE</span>
+                <span class="uc-roi-pill">SAVES 1+ HR/DAY PER STAFF</span>
+              </div>
+              <h3>Instant Internal FAQ &amp; Document Oracle (Private RAG)</h3>
+              <p>
+                Stop employees from digging through 12 Google Drive folders, Slack threads, and PDFs. Ask a question in plain English and get the exact answer in 2 seconds.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Searches Google Drive, SharePoint, Notion, Slack, PDFs, and wikis simultaneously</li>
+              <li>Provides clickable links to the exact page and paragraph of the source document</li>
+              <li>Strict role-based permissions (HR/Finance docs stay locked to authorized roles)</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">04 // CUSTOMER FRONTDOOR</span>
+                <span class="uc-roi-pill">DEFLECTS 80% OF TICKETS</span>
+              </div>
+              <h3>24/7 Customer Support, Triage &amp; Booking Chatbot</h3>
+              <p>
+                Deploy a customer-facing version of your Brain on your website, client portal, or SMS that answers complex product/service questions and books appointments live.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Checks live order status, inventory availability, and account history</li>
+              <li>Qualifies inbound leads, collects project specs, and books calendar slots</li>
+              <li>Hands off high-priority tickets to human reps with full context summaries</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">05 // EXECUTIVE INTELLIGENCE</span>
+                <span class="uc-roi-pill">REAL-TIME DECISIONS</span>
+              </div>
+              <h3>Natural-Language BI &amp; Live Performance Dashboards</h3>
+              <p>
+                Connect your financial, sales, and operational databases so leadership can ask complex analytical questions and view live KPI dashboards at any moment.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>"Which marketing channel produced our highest LTV clients this quarter?"</li>
+              <li>Automated daily/weekly executive briefings delivered to Slack or Email</li>
+              <li>Proactive anomaly alerts when margins dip, costs spike, or SLAs slip</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">06 // REVENUE &amp; QUOTING</span>
+                <span class="uc-roi-pill">10X FASTER QUOTES</span>
+              </div>
+              <h3>Automated Proposals, RFPs, Quotes &amp; Contracts</h3>
+              <p>
+                Combine historical winning proposals, live pricing tables, and client call notes to draft accurate proposals, RFP responses, and contracts in seconds.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Auto-completes 100-question enterprise RFPs using verified company answers</li>
+              <li>Calculates custom estimates with built-in margin and discount guardrails</li>
+              <li>Pushes approved quotes directly into DocuSign/PandaDoc and your CRM</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">07 // FIELD &amp; MOBILE OPS</span>
+                <span class="uc-roi-pill">ZERO FIELD DELAYS</span>
+              </div>
+              <h3>Voice &amp; Mobile Assistant for Field &amp; Ops Teams</h3>
+              <p>
+                Give technicians, drivers, warehouse staff, and outside sales reps instant mobile or voice access to equipment manuals, client history, and job logging.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Troubleshoot equipment error codes on-site from 1,000-page technical manuals</li>
+              <li>Voice-to-database job notes: speak a 30-second update to log parts, hours &amp; status</li>
+              <li>Instant lookup of client site codes, gate instructions, and past service history</li>
+            </ul>
+          </article>
+
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-num">08 // AUTONOMOUS ACTION AGENTS</span>
+                <span class="uc-roi-pill">END-TO-END EXECUTION</span>
+              </div>
+              <h3>Cross-System Action Execution (A Brain That Acts)</h3>
+              <p>
+                Your Company AI Brain doesn't just chat—it has secure API hands to execute multi-step tasks across your software stack whenever you command it.
+              </p>
+            </div>
+            <ul class="uc-examples">
+              <li>Creates &amp; assigns tasks in Asana, Jira, Linear, Monday, or ClickUp</li>
+              <li>Generates Stripe/QuickBooks invoices and sends automated follow-ups</li>
+              <li>Updates CRM deal stages, schedules meetings, and files compliance documents</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPECTATIONS, SECURITY & ROLLOUT BLUEPRINT -->
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">WHAT TO EXPECT // TURNKEY IMPLEMENTATION &amp; SECURITY</div>
+        <h2 class="sec-title">How We Architect, Secure &amp; Launch Your Company AI Brain.</h2>
+        <p class="sec-desc">
+          We handle the entire engineering lifecycle—from cleaning and structuring your databases to setting up role-based security guardrails and training your team.
+        </p>
+
+        <div class="blueprint-grid">
+          <div class="step-card">
+            <span class="step-phase">PHASE 01 // AUDIT</span>
+            <h4>Knowledge, Database &amp; Bottleneck Mapping</h4>
+            <p>
+              We audit your current documents, SOPs, spreadsheets, CRMs, and manual data-entry bottlenecks to design the highest-ROI Brain architecture.
+            </p>
+          </div>
+          <div class="step-card">
+            <span class="step-phase">PHASE 02 // DATA &amp; RAG</span>
+            <h4>Automated Ingestion &amp; Database Structuring</h4>
+            <p>
+              We build automated ingestion pipelines that clean your unstructured files, construct/link your SQL &amp; vector databases, and establish real-time sync.
+            </p>
+          </div>
+          <div class="step-card">
+            <span class="step-phase">PHASE 03 // AGENTS &amp; UI</span>
+            <h4>Custom Action Agents &amp; Permission Guardrails</h4>
+            <p>
+              We configure role-based access controls, citation enforcement, and API action tools, then deploy your Brain via web portal, Slack/Teams, and website widget.
+            </p>
+          </div>
+          <div class="step-card">
+            <span class="step-phase">PHASE 04 // SCALE</span>
+            <h4>Team Launch, Live Telemetry &amp; Zero-Touch Sync</h4>
+            <p>
+              Your Brain goes live with continuous auto-indexing: every new document, email, or database update keeps the Brain smarter every single day.
+            </p>
+          </div>
+        </div>
+
+        <div class="security-banner">
+          <div class="sec-guarantee">
+            <h4>🔒 100% Private &amp; Isolated</h4>
+            <p>
+              Your proprietary company data, databases, and documents are strictly isolated and <strong>never</strong> used to train public AI models.
+            </p>
+          </div>
+          <div class="sec-guarantee">
+            <h4>🛡️ Role-Based Access Control</h4>
+            <p>
+              Granular permissions ensure customers only see public knowledge, junior staff see SOPs, and executives access financial &amp; margin data.
+            </p>
+          </div>
+          <div class="sec-guarantee">
+            <h4>📌 Verified Citations &amp; Audit Logs</h4>
+            <p>
+              Every answer includes clickable links to the exact source document or database row, and every automated database write is logged.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE OTHER PILLARS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="eyebrow">COMPLETE ECOSYSTEM // EXPLORE OUR OTHER CORE SERVICES</div>
+        <h2 class="sec-title">Pair Your AI Brain With Custom Software &amp; Automations.</h2>
+        <div class="cross-nav-grid" style="margin-top: 24px;">
+          <a href="custom-applications.html" class="cross-card">
+            <div>
+              <h4>01 // Custom Applications</h4>
+              <p>Purpose-built client portals, internal dispatch hubs, and custom SaaS platforms with zero per-seat license bloat.</p>
+            </div>
+            <span class="cross-link-lbl">Explore Custom Apps &amp; ROI →</span>
+          </a>
+          <a href="workflow-automations.html" class="cross-card">
+            <div>
+              <h4>02 // Workflow Automations</h4>
+              <p>Zero-touch webhook pipelines that connect your CRM, billing, inventory, and communications 24/7.</p>
+            </div>
+            <span class="cross-link-lbl">Explore Automations &amp; ROI →</span>
+          </a>
+          <a href="ai-integrations.html" class="cross-card">
+            <div>
+              <h4>03 // AI Integrations</h4>
+              <p>Embed intelligent document processing, voice AI, and autonomous triage agents directly inside your existing stack.</p>
+            </div>
+            <span class="cross-link-lbl">Explore AI Integrations &amp; ROI →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT INQUIRY CTA -->
+    <section class="cta-section" id="contact" style="padding-top: 48px;">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="breadcrumb-pill" style="margin-bottom: 12px;">READY TO BUILD YOUR COMPANY AI BRAIN?</div>
+            <h2>Get Your Custom AI Brain &amp; Database Blueprint.</h2>
+            <p>
+              Tell us what databases you want to automate, what knowledge you want centralized, or how many hours of manual work you want to eliminate—we’ll map out your architecture.
+            </p>
+          </div>
+          <form class="quick-form" id="project-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+            </div>
+            <select name="focus" aria-label="Primary Focus">
+              <option value="Company AI Brain" selected>Company AI Brain &amp; Automated Databases</option>
+              <option value="Custom Application">Custom Application</option>
+              <option value="Workflow Automation">Workflow Automation</option>
+              <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
+              <option value="Full Stack (App + Automation + AI)">Full Stack (App + Automation + AI)</option>
+            </select>
+            <textarea name="goal" rows="4" placeholder="Tell us about your databases, documents, training needs, or manual workflows you want your Company AI Brain to handle..." required></textarea>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">Request Brain Blueprint →</button>
+            <div class="form-feedback" id="form-feedback">
+              ✓ Blueprint request received! We'll reach out shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/mvn-separate-badge-white.svg" alt="MVN Icon" />
+        <span>MODERN VISTAS NETWORK</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
+      </div>
+      <div>
+        &copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive Simulator Tabs
+    const tabs = document.querySelectorAll('.sim-tab');
+    const panes = document.querySelectorAll('.sim-pane');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        panes.forEach((p) => p.classList.remove('active'));
+        tab.classList.add('active');
+        const target = document.getElementById(tab.getAttribute('data-tab'));
+        if (target) target.classList.add('active');
+      });
+    });
+
+    // Form handler
+    const form = document.getElementById('project-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
