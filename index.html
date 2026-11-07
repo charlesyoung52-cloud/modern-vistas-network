@@ -82,9 +82,9 @@
     .navbar {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       height: 84px;
-      gap: 32px;
+      gap: 24px;
     }
     .brand-link {
       display: flex;
@@ -92,7 +92,7 @@
       text-decoration: none;
     }
     .brand-logo {
-      height: 54px;
+      height: 50px;
       width: auto;
       display: block;
       object-fit: contain;
@@ -101,12 +101,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 20px;
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 16px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -114,7 +114,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--navy);
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 600;
       transition: color 0.2s ease;
       white-space: nowrap;
@@ -481,7 +481,7 @@
     }
     .pillars-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
     .pillar-card {
@@ -739,7 +739,7 @@
     .footer-links a:hover {
       color: var(--navy);
     }
-    @media (max-width: 960px) {
+    @media (max-width: 1040px) {
       .hero-grid,
       .pillars-grid,
       .cta-card {
@@ -1032,6 +1032,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="web-design-development.html">Web Design</a></li>
           <li><a href="custom-applications.html">Custom Apps</a></li>
           <li><a href="workflow-automations.html">Automations</a></li>
           <li><a href="ai-integrations.html">AI Integrations</a></li>
@@ -1133,11 +1134,44 @@
         <div class="section-head">
           <div>
             <div class="section-eyebrow">CORE CAPABILITIES // WHAT WE BUILD</div>
-            <h2 class="section-title">Three Pillars. One Unified Network.</h2>
+            <h2 class="section-title">Four Pillars. One Unified Network.</h2>
           </div>
         </div>
         <div class="pillars-grid">
-          <!-- Pillar 1: Custom Apps -->
+          <!-- Pillar 1: Web Design & Dev -->
+          <article class="pillar-card">
+            <div>
+              <div class="pillar-top">
+                <div class="pillar-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <span class="pillar-num">01 // WEB DESIGN</span>
+              </div>
+              <h3>Custom &amp; Complex Web Design</h3>
+              <p>
+                Bespoke, high-performance web platforms and interactive client experiences engineered for sub-second speeds, SEO dominance, and 3x conversion.
+              </p>
+              <div class="pillar-savings">
+                <span class="pillar-savings-title">🌐 99+ WEB VITALS &amp; 3X CONVERSION</span>
+                <div class="pillar-savings-desc">
+                  Replace sluggish WordPress themes and fragile plugins with clean, bespoke code natively tied to your Company AI Brain and databases.
+                </div>
+              </div>
+            </div>
+            <div>
+              <ul class="pillar-tags">
+                <li>Interactive Portals</li>
+                <li>Headless Architecture</li>
+                <li>Bespoke UI/UX</li>
+              </ul>
+              <a href="web-design-development.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
+            </div>
+          </article>
+          <!-- Pillar 2: Custom Apps -->
           <article class="pillar-card">
             <div>
               <div class="pillar-top">
@@ -1148,7 +1182,7 @@
                     <line x1="12" y1="17" x2="12" y2="21"></line>
                   </svg>
                 </div>
-                <span class="pillar-num">01 // CUSTOM</span>
+                <span class="pillar-num">02 // CUSTOM APPS</span>
               </div>
               <h3>Custom Applications</h3>
               <p>
@@ -1170,7 +1204,7 @@
               <a href="custom-applications.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
             </div>
           </article>
-          <!-- Pillar 2: Automations -->
+          <!-- Pillar 3: Automations -->
           <article class="pillar-card">
             <div>
               <div class="pillar-top">
@@ -1183,7 +1217,7 @@
                     <line x1="4" y1="4" x2="9" y2="9"></line>
                   </svg>
                 </div>
-                <span class="pillar-num">02 // AUTOMATION</span>
+                <span class="pillar-num">03 // AUTOMATION</span>
               </div>
               <h3>Workflow Automations</h3>
               <p>
@@ -1205,7 +1239,7 @@
               <a href="workflow-automations.html" class="pillar-cta-link">Explore Use Cases &amp; ROI <span>→</span></a>
             </div>
           </article>
-          <!-- Pillar 3: AI Integrations -->
+          <!-- Pillar 4: AI Integrations -->
           <article class="pillar-card">
             <div>
               <div class="pillar-top">
@@ -1216,7 +1250,7 @@
                     <circle cx="12" cy="14" r="4"></circle>
                   </svg>
                 </div>
-                <span class="pillar-num">03 // AI SYSTEMS</span>
+                <span class="pillar-num">04 // AI SYSTEMS</span>
               </div>
               <h3>AI Integrations</h3>
               <p>
@@ -1263,10 +1297,11 @@
             <input type="tel" name="phone" placeholder="Phone Number" />
             <select name="focus" aria-label="Primary Focus">
               <option value="Company AI Brain">Company AI Brain</option>
+              <option value="Custom Web Design &amp; Development">Custom Web Design &amp; Development</option>
               <option value="Custom Application">Custom Application</option>
               <option value="Workflow Automation">Workflow Automation</option>
               <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
-              <option value="Full Stack (App + Automation + AI)">Full Stack (App + Automation + AI)</option>
+              <option value="Full Stack (Web + Brain + Automation)">Full Stack (Web + Brain + Automation)</option>
             </select>
             <textarea name="goal" rows="4" placeholder="Briefly describe what you want to build, automate, or include in your Company AI Brain..." required></textarea>
             <button type="submit" class="btn btn-cyan" style="width: 100%;">Request Info →</button>
@@ -1287,6 +1322,7 @@
       </div>
       <div class="footer-links">
         <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="web-design-development.html">Web Design</a>
         <a href="custom-applications.html">Custom Apps</a>
         <a href="workflow-automations.html">Automations</a>
         <a href="ai-integrations.html">AI Integrations</a>
