@@ -150,7 +150,8 @@
     }
     .uc-bullets li::before { content: "→ "; color: var(--teal); font-weight: 700; }
 
-    .cross-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+    /* CROSS NAV & CTA */
+    .cross-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
     .cross-card {
       background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
       padding: 18px; text-decoration: none; color: var(--navy); transition: all 0.2s ease;
@@ -189,7 +190,7 @@
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1040px) {
       .savings-strip, .uc-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
       .navbar { height: 68px; padding: 0; justify-content: space-between; gap: 16px; }
       .brand-logo { height: 42px; }
@@ -268,6 +269,7 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="web-design-development.html">Web Design</a></li>
           <li><a href="custom-applications.html">Custom Apps</a></li>
           <li><a href="workflow-automations.html" class="active">Automations</a></li>
           <li><a href="ai-integrations.html">AI Integrations</a></li>
@@ -432,8 +434,13 @@
             <p>Our most expansive service: automated large-scale database creation, employee training, and 24/7 intelligence.</p>
             <span>Explore the Flagship AI Brain →</span>
           </a>
+          <a href="web-design-development.html" class="cross-card">
+            <h4>01 // Web Design &amp; Dev</h4>
+            <p>Bespoke web platforms and interactive intake tools that trigger automated pipelines on click.</p>
+            <span>Explore Web Design →</span>
+          </a>
           <a href="custom-applications.html" class="cross-card">
-            <h4>01 // Custom Applications</h4>
+            <h4>02 // Custom Applications</h4>
             <p>Replace per-seat SaaS bloat with custom portals and internal operations hubs.</p>
             <span>Explore Custom Apps →</span>
           </a>
@@ -462,6 +469,7 @@
             <input type="tel" name="phone" placeholder="Phone Number" />
             <select name="focus" aria-label="Primary Focus">
               <option value="Workflow Automation" selected>Workflow Automation</option>
+              <option value="Custom Web Design &amp; Development">Custom Web Design &amp; Development</option>
               <option value="Company AI Brain">Company AI Brain</option>
               <option value="Custom Application">Custom Application</option>
               <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
@@ -485,6 +493,7 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="web-design-development.html">Web Design</a>
         <a href="custom-applications.html">Custom Apps</a>
         <a href="workflow-automations.html">Automations</a>
         <a href="ai-integrations.html">AI Integrations</a>
