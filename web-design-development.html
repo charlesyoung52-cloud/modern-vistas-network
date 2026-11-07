@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom &amp; Complex Web Design &amp; Development — Modern Vistas Network</title>
+  <meta name="description" content="Bespoke, high-performance web design and complex web development. Fast, conversion-engineered, and natively connected to your Company AI Brain, databases, and workflow automations." />
+  <link rel="canonical" href="https://modernvistasnetwork.com/web-design-development.html" />
+  <!-- Open Graph / iMessage / WhatsApp / Social Cards -->
+  <meta property="og:site_name" content="Modern Vistas Network" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Custom &amp; Complex Web Design &amp; Development — Modern Vistas Network" />
+  <meta property="og:description" content="Bespoke, high-performance web design and complex web development natively connected to your Company AI Brain, databases, and workflow automations." />
+  <meta property="og:url" content="https://modernvistasnetwork.com/web-design-development.html" />
+  <meta property="og:image" content="https://modernvistasnetwork.com/assets/og-image.png" />
+  <meta property="og:image:secure_url" content="https://modernvistasnetwork.com/assets/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Modern Vistas Network Logo" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custom &amp; Complex Web Design &amp; Development — Modern Vistas Network" />
+  <meta name="twitter:description" content="Bespoke, high-performance web design and complex web development natively connected to your Company AI Brain, databases, and workflow automations." />
+  <meta name="twitter:image" content="https://modernvistasnetwork.com/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Modern Vistas Network Logo" />
+  <!-- Favicons & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --navy: #051329;
+      --navy-light: #0D2342;
+      --cyan: #12CAFF;
+      --teal: #00A8CC;
+      --emerald: #10B981;
+      --text: #051329;
+      --muted: #52637A;
+      --border: #E2E8F0;
+      --radius-lg: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 24px; }
+    .brand-link { display: flex; align-items: center; text-decoration: none; }
+    .brand-logo { height: 50px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 20px; }
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14px; font-weight: 600; transition: color 0.2s ease; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .mobile-menu-toggle { display: none; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 13.5px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1.5px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--navy); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-cyan {
+      background: var(--cyan); color: var(--navy); font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(18, 202, 255, 0.28);
+    }
+    .btn-cyan:hover { background: #33D3FF; transform: translateY(-1px); }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(155deg, #051329 0%, #0D2342 100%);
+      color: #FFFFFF;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--cyan);
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      letter-spacing: 1.6px; text-transform: uppercase; color: var(--navy);
+      background: var(--cyan); padding: 6px 14px; border-radius: 7px; margin-bottom: 16px;
+    }
+    .page-hero h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700; line-height: 1.12; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .page-hero h1 span { color: var(--cyan); }
+    .page-hero p { font-size: 16.5px; color: #CBD5E1; max-width: 780px; margin-bottom: 28px; }
+    .savings-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .save-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(18, 202, 255, 0.25);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .save-val {
+      font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700;
+      color: var(--cyan); display: block; margin-bottom: 4px;
+    }
+    .save-txt { font-size: 13px; color: #E2E8F0; line-height: 1.4; }
+
+    /* SECTIONS */
+    .section { padding: 54px 0; }
+    .section-alt { background: #FFFFFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-dark { background: #051329; color: #FFFFFF; border-top: 1px solid rgba(18, 202, 255, 0.2); border-bottom: 1px solid rgba(18, 202, 255, 0.2); }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 700;
+      color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .section-dark .eyebrow { color: var(--cyan); }
+    .sec-title {
+      font-family: 'Chakra Petch', sans-serif; font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    }
+    .section-dark .sec-title { color: #FFFFFF; }
+    .sec-desc { font-size: 15.5px; color: var(--muted); max-width: 740px; margin-bottom: 32px; }
+    .section-dark .sec-desc { color: #CBD5E1; }
+
+    /* SYSTEM CONNECTION SECTION */
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .connect-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(18, 202, 255, 0.22);
+      border-radius: 18px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .connect-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--cyan), var(--teal));
+    }
+    .connect-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .connect-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+    .connect-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(18, 202, 255, 0.12);
+      border: 1px solid rgba(18, 202, 255, 0.3);
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.6px;
+    }
+    .connect-icon {
+      color: var(--cyan);
+      font-size: 18px;
+    }
+    .connect-card h3 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .connect-card p {
+      font-size: 14px;
+      color: #CBD5E1;
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+    .connect-flow {
+      background: rgba(3, 11, 24, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: #94A3B8;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .connect-flow span strong {
+      color: var(--cyan);
+    }
+
+    /* 6 USE CASE CARDS */
+    .uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .uc-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: 0 8px 24px rgba(5, 19, 41, 0.03);
+    }
+    .uc-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .uc-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: var(--navy); color: var(--cyan); padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-roi {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; padding: 4px 10px; border-radius: 6px;
+    }
+    .uc-card h3 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--navy); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .uc-card p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .uc-bullets {
+      list-style: none; padding-top: 12px; border-top: 1px solid #F1F5F9;
+      display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--navy);
+    }
+    .uc-bullets li::before { content: "→ "; color: var(--teal); font-weight: 700; }
+
+    /* COMPARISON TABLE */
+    .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .comp-col {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 22px;
+    }
+    .comp-col.highlight {
+      background: var(--navy); color: #FFFFFF; border-color: var(--cyan);
+      box-shadow: 0 16px 36px rgba(5, 19, 41, 0.14);
+    }
+    .comp-col h4 {
+      font-family: 'Chakra Petch', sans-serif; font-size: 18px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .comp-col.highlight h4 { color: var(--cyan); }
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; }
+
+    /* CROSS NAV & CTA */
+    .cross-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+    .cross-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; text-decoration: none; color: var(--navy); transition: all 0.2s ease;
+    }
+    .cross-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .cross-card h4 { font-family: 'Chakra Petch', sans-serif; font-size: 15.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .cross-card p { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; line-height: 1.45; }
+    .cross-card span { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--teal); }
+
+    .cta-section { padding: 36px 0 56px; }
+    .cta-card {
+      background: var(--navy); color: #FFFFFF; border-radius: var(--radius-lg); padding: 36px;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .cta-card h2 { font-family: 'Chakra Petch', sans-serif; font-size: 28px; text-transform: uppercase; margin-bottom: 8px; }
+    .cta-card p { color: #CBD5E1; font-size: 14.5px; }
+    .quick-form {
+      display: flex; flex-direction: column; gap: 10px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px; border-radius: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .quick-form input, .quick-form select, .quick-form textarea {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18); background: rgba(5, 19, 41, 0.75);
+      color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
+    }
+    .quick-form textarea { min-height: 105px; resize: vertical; }
+    .quick-form input::placeholder, .quick-form textarea::placeholder { color: #94A3B8; }
+    .form-feedback { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--cyan); display: none; }
+
+    footer { margin-top: auto; background: #FFFFFF; border-top: 1px solid var(--border); padding: 22px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--navy); }
+    .footer-brand img { height: 32px; width: auto; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 13px; }
+
+    @media (max-width: 1040px) {
+      .savings-strip, .connect-grid, .uc-grid, .comp-grid, .cross-grid, .cta-card { grid-template-columns: 1fr; }
+      .navbar { height: 68px; padding: 0; justify-content: space-between; gap: 16px; }
+      .brand-logo { height: 42px; }
+      .mobile-menu-toggle {
+        display: inline-flex; flex-direction: column; justify-content: center; align-items: center;
+        gap: 5px; width: 42px; height: 42px; background: #F8FAFC; border: 1px solid var(--border);
+        border-radius: 10px; cursor: pointer; padding: 0; transition: all 0.2s ease;
+      }
+      .mobile-menu-toggle:hover { border-color: var(--navy); }
+      .mobile-menu-toggle .bar {
+        width: 20px; height: 2px; background: var(--navy); border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+      }
+      .mobile-menu-toggle.is-open { background: var(--navy); border-color: var(--navy); }
+      .mobile-menu-toggle.is-open .bar { background: var(--cyan); }
+      .mobile-menu-toggle.is-open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .mobile-menu-toggle.is-open .bar:nth-child(2) { opacity: 0; }
+      .mobile-menu-toggle.is-open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .nav-menu {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: #FFFFFF; border-bottom: 2px solid var(--cyan);
+        box-shadow: 0 18px 36px rgba(5, 19, 41, 0.14); padding: 14px 20px 20px;
+        flex-direction: column; align-items: stretch; gap: 10px; z-index: 110;
+      }
+      .nav-menu.is-open { display: flex; }
+      .nav-links { flex-direction: column; align-items: stretch; gap: 4px; width: 100%; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 11px 14px; border-radius: 9px; font-size: 15px; font-weight: 600; color: var(--navy);
+      }
+      .nav-links a:hover, .nav-links a.active { background: #F0F9FF; color: var(--teal); }
+      .nav-links a.active::after { content: "●"; font-size: 10px; color: var(--teal); }
+      .nav-cta { width: 100%; justify-content: center; padding: 12px 18px; font-size: 14px; margin-top: 4px; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .navbar { height: 62px; }
+      .brand-logo { height: 36px; max-width: 175px; }
+      .nav-menu { padding: 12px 16px 18px; }
+      .page-hero { padding: 28px 0 30px; }
+      .pill { font-size: 10px; letter-spacing: 1.2px; padding: 5px 10px; margin-bottom: 12px; }
+      .page-hero h1 { font-size: 26px; line-height: 1.15; margin-bottom: 10px; }
+      .page-hero p { font-size: 14.5px; margin-bottom: 18px; }
+      .savings-strip { gap: 10px; padding-top: 16px; }
+      .save-card { padding: 13px 14px; }
+      .save-val { font-size: 20px; }
+      .save-txt { font-size: 12.5px; }
+      .section { padding: 36px 0; }
+      .sec-title { font-size: 22px; }
+      .sec-desc { font-size: 14.5px; margin-bottom: 22px; }
+      .connect-card { padding: 20px 18px; }
+      .connect-card h3 { font-size: 18px; }
+      .uc-grid { gap: 14px; }
+      .uc-card { padding: 18px 16px; }
+      .uc-top { flex-wrap: wrap; gap: 6px; }
+      .uc-card h3 { font-size: 17.5px; }
+      .comp-col { padding: 18px 16px; }
+      .cta-section { padding: 20px 0 36px; }
+      .cta-card { padding: 22px 16px; gap: 18px; }
+      .cta-card h2 { font-size: 21px; }
+      .quick-form { padding: 14px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 12px; }
+      .footer-links { flex-wrap: wrap; justify-content: center; gap: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company-ai-brain.html">Company AI Brain</a></li>
+          <li><a href="web-design-development.html" class="active">Web Design</a></li>
+          <li><a href="custom-applications.html">Custom Apps</a></li>
+          <li><a href="workflow-automations.html">Automations</a></li>
+          <li><a href="ai-integrations.html">AI Integrations</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a Discovery Call →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="pill">04 // BESPOKE DIGITAL EXPERIENCES &amp; WEB PLATFORMS</div>
+        <h1>Custom &amp; Complex Web Design Engineered to <span>Convert, Scale &amp; Integrate.</span></h1>
+        <p>
+          Most companies are trapped between sluggish, fragile WordPress templates and traditional agencies that only design static brochures. We engineer bespoke, high-velocity web platforms that serve as your company’s highest-converting front door—natively woven into your Company AI Brain, custom portals, and automated back-office pipelines.
+        </p>
+        <div class="savings-strip">
+          <div class="save-card">
+            <span class="save-val">99+ Web Vitals</span>
+            <span class="save-txt">Sub-second load times and zero plugin bloat—engineered for SEO dominance and maximum user retention.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">3x Higher Conversion</span>
+            <span class="save-txt">Interactive estimators, real-time calculators, and self-service flows turn passive browsers into qualified buyers.</span>
+          </div>
+          <div class="save-card">
+            <span class="save-val">100% Native Tie-In</span>
+            <span class="save-txt">Direct real-time connection to your AI Brain, PostgreSQL/Mongo databases, and automated webhook pipelines.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT CONNECTS WITH OUR OTHER SERVICES -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="eyebrow">SYSTEM ORCHESTRATION // UNIFIED ARCHITECTURE</div>
+        <h2 class="sec-title">How Our Web Development Connects With Your Entire Stack.</h2>
+        <p class="sec-desc">
+          Your website shouldn’t be an isolated digital island that requires manual copy-pasting into your back-office tools. We build your web experience as the interactive front door to our entire suite of software, automation, and AI systems.
+        </p>
+
+        <div class="connect-grid">
+          <!-- Connection 1: Company AI Brain -->
+          <article class="connect-card">
+            <div>
+              <div class="connect-header">
+                <span class="connect-badge">CONNECTION 01 // CENTRAL INTELLIGENCE</span>
+                <span class="connect-icon">🧠</span>
+              </div>
+              <h3>Tied Directly to Your Company AI Brain</h3>
+              <p>
+                Embed intelligent conversational agents directly into your website that read from the exact same centralized knowledge hub powering your team. When your Company AI Brain updates with new products, policies, or inventory, your website’s answers and interactive widgets update instantly without code redeployment.
+              </p>
+            </div>
+            <div class="connect-flow">
+              <span><strong>Visitor Inquiry:</strong> Prospects ask complex technical or pricing questions in the site widget</span>
+              <span><strong>Brain Reasoning:</strong> Neural network searches verified company knowledge base in milliseconds</span>
+              <span><strong>Instant Resolution:</strong> Delivers accurate, branded answers and schedules qualified discovery calls</span>
+            </div>
+          </article>
+
+          <!-- Connection 2: Custom Applications & Portals -->
+          <article class="connect-card">
+            <div>
+              <div class="connect-header">
+                <span class="connect-badge">CONNECTION 02 // SOFTWARE ARCHITECTURE</span>
+                <span class="connect-icon">⚡</span>
+              </div>
+              <h3>Seamless Gateway to Custom Applications &amp; Portals</h3>
+              <p>
+                Eliminate the jarring disconnect between marketing pages and software apps. Your public web design shares the exact same design tokens, authentication session states, and responsive mechanics as your internal dispatch hubs, customer account vaults, and custom CPQ quoting calculators.
+              </p>
+            </div>
+            <div class="connect-flow">
+              <span><strong>Marketing Entry:</strong> Prospects explore services on high-converting interactive pages</span>
+              <span><strong>Instant Transition:</strong> 1-click single-sign-on (SSO) directly into client dashboard or ordering portal</span>
+              <span><strong>Zero Friction:</strong> Consistent styling, instant state hydration, and unified user permissions</span>
+            </div>
+          </article>
+
+          <!-- Connection 3: Workflow Automations -->
+          <article class="connect-card">
+            <div>
+              <div class="connect-header">
+                <span class="connect-badge">CONNECTION 03 // ZERO-TOUCH PIPELINES</span>
+                <span class="connect-icon">⚙️</span>
+              </div>
+              <h3>Live Webhooks &amp; Automated Event Pipelines</h3>
+              <p>
+                Every form submission, file upload, slider movement, or checkout event triggers immediate, zero-touch API pipelines. Instead of emailing an admin inbox, the website writes validated records straight to your master CRM, generates QuickBooks invoices, notifies your Slack ops channel, and dispatches customer SMS notifications in under 2 seconds.
+              </p>
+            </div>
+            <div class="connect-flow">
+              <span><strong>Form Action:</strong> Customer completes interactive multi-step project scope on your site</span>
+              <span><strong>Pipeline Trigger:</strong> Webhook provisions CRM deal, dispatches technician alert, and schedules email</span>
+              <span><strong>Admin Time Saved:</strong> Reclaims 20+ hours weekly of manual copy-paste bookkeeping</span>
+            </div>
+          </article>
+
+          <!-- Connection 4: AI Integrations & Agents -->
+          <article class="connect-card">
+            <div>
+              <div class="connect-header">
+                <span class="connect-badge">CONNECTION 04 // MULTI-MODAL AI</span>
+                <span class="connect-icon">🤖</span>
+              </div>
+              <h3>In-Browser AI Document Extraction &amp; Voice Agents</h3>
+              <p>
+                Transform static web forms into dynamic AI-assisted intake portals. Visitors can upload blueprints, invoices, receipts, or photos directly on the site, where in-browser vision and OCR agents extract key variables, compute instant quotes, and verify compliance automatically.
+              </p>
+            </div>
+            <div class="connect-flow">
+              <span><strong>Upload &amp; Analyze:</strong> Customer drops a PDF or photo into the web intake interface</span>
+              <span><strong>AI Extraction:</strong> Computer vision models parse dimensions, line items, and data fields in 2 sec</span>
+              <span><strong>Real-Time Results:</strong> Client sees an interactive breakdown and pricing confirmation immediately</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE POSSIBILITIES: 6 DETAILED USE CASES -->
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">THE POSSIBILITIES // BESPOKE CAPABILITIES</div>
+        <h2 class="sec-title">6 High-Impact Web Platforms We Design &amp; Engineer.</h2>
+        <p class="sec-desc">
+          We don’t build generic cookie-cutter templates. We engineer complex, interactive digital experiences that position your business at the forefront of your industry.
+        </p>
+
+        <div class="uc-grid">
+          <!-- Use Case 1 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 01</span>
+                <span class="uc-roi">3X CONVERSION RATE</span>
+              </div>
+              <h3>Interactive Estimators &amp; Dynamic CPQ Configurator Portals</h3>
+              <p>
+                Replace static "contact us for a quote" forms with dynamic calculators where prospects adjust sliders, choose custom specifications, view live pricing guardrails, and receive instant personalized proposals.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Multi-variable pricing algorithms that calculate labor, materials, and turnaround in real time</li>
+              <li>Automated generation of branded PDF estimate summaries sent straight to the client's inbox</li>
+              <li>Direct hand-off into your sales pipeline with pre-qualified budget parameters</li>
+            </ul>
+          </article>
+
+          <!-- Use Case 2 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 02</span>
+                <span class="uc-roi">SUB-SECOND SPEEDS</span>
+              </div>
+              <h3>Headless, Ultra-Fast Brand Flagships &amp; Decoupled CMS</h3>
+              <p>
+                Handcrafted, decoupled web architectures engineered with clean HTML5, TypeScript, and modern Edge APIs. Zero bloated plugins, zero WordPress security exploits, and near-instant load times globally.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>98+ Google Core Web Vitals scores across Desktop and Mobile</li>
+              <li>Decoupled Headless CMS that lets marketing publish blogs &amp; case studies without breaking code</li>
+              <li>Immunity to common CMS injection vulnerabilities and outdated plugin crashes</li>
+            </ul>
+          </article>
+
+          <!-- Use Case 3 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 03</span>
+                <span class="uc-roi">80% FEWER SUPPORT CALLS</span>
+              </div>
+              <h3>Live Data-Driven Dashboards &amp; Customer Status Hubs</h3>
+              <p>
+                Give clients a clean, transparent window into their orders, project milestones, service dispatches, and reports with live WebSocket feeds that update without refreshing the page.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Real-time visual milestone trackers and progress roadmaps</li>
+              <li>Encrypted document vault for contracts, blueprints, and tax paperwork</li>
+              <li>Embedded one-click Stripe/ACH payment workflows and renewal management</li>
+            </ul>
+          </article>
+
+          <!-- Use Case 4 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 04</span>
+                <span class="uc-roi">ZERO ONBOARDING LAG</span>
+              </div>
+              <h3>Multi-Step Intake, Onboarding &amp; Contract Verification Portals</h3>
+              <p>
+                Turn painful 20-page client intake PDFs and back-and-forth emails into a guided, gamified digital intake portal with automated state saving, form validation, and instant e-signatures.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Auto-save session state so clients can pause and resume on desktop or phone</li>
+              <li>Automated business registration, tax ID, and address verification via live APIs</li>
+              <li>Instant legal agreement signing and counter-party document archive generation</li>
+            </ul>
+          </article>
+
+          <!-- Use Case 5 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 05</span>
+                <span class="uc-roi">PREMIUM MARKET POSITION</span>
+              </div>
+              <h3>Interactive 3D, Canvas &amp; High-Fidelity UI Micro-Experiences</h3>
+              <p>
+                Captivate high-value enterprise prospects with smooth Canvas visualizations, interactive SVG schematics, and fluid micro-animations that communicate complex products with effortless elegance.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Lightweight 3D model and spatial product visualizers optimized for 60fps on mobile</li>
+              <li>Interactive process flow diagrams that let prospects see how your service operates</li>
+              <li>Memorable brand presentation that immediately establishes industry leadership</li>
+            </ul>
+          </article>
+
+          <!-- Use Case 6 -->
+          <article class="uc-card">
+            <div>
+              <div class="uc-top">
+                <span class="uc-tag">CAPABILITY 06</span>
+                <span class="uc-roi">AUTOMATED SEO INBOUND</span>
+              </div>
+              <h3>Authority Resource Centers, Case Studies &amp; Content Engines</h3>
+              <p>
+                Dominate competitive search queries with rich, structured knowledge centers, searchable customer case study archives, and gated lead-magnet portals connected to your CRM.
+              </p>
+            </div>
+            <ul class="uc-bullets">
+              <li>Instant search and category filtering across hundreds of case studies and technical articles</li>
+              <li>Automated JSON-LD Schema markup for Google Rich Snippets and FAQ search carousels</li>
+              <li>Gated asset downloads that enrich lead profiles and trigger personalized email sequences</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE FINANCIAL & TECHNICAL CASE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="eyebrow">THE ARCHITECTURAL DIFFERENCE // WHY BESPOKE WINS</div>
+        <h2 class="sec-title">Custom Development vs. Traditional Approaches.</h2>
+        <div class="comp-grid" style="margin-top: 24px;">
+          <div class="comp-col">
+            <h4>✗ Slow WordPress &amp; Page Builders</h4>
+            <ul class="comp-list">
+              <li>• Cluttered with 35+ conflicting plugins that break on update</li>
+              <li>• Slow 4–8 second load times driving away 50%+ of mobile visitors</li>
+              <li>• Vulnerable to automated bot attacks and malicious PHP injections</li>
+              <li>• Disconnected from your databases—requires manual data entry</li>
+            </ul>
+          </div>
+          <div class="comp-col">
+            <h4>✗ Traditional Creative Agencies</h4>
+            <ul class="comp-list">
+              <li>• Deliver pretty mockups with zero engineering or database depth</li>
+              <li>• $30k–$80k retainers with 6-month timelines for basic brochure sites</li>
+              <li>• No AI integration, no webhook pipelines, no custom logic</li>
+              <li>• Hand you a static site and disappear when you need backend tie-ins</li>
+            </ul>
+          </div>
+          <div class="comp-col highlight">
+            <h4>✓ Modern Vistas Custom Web</h4>
+            <ul class="comp-list">
+              <li>• 100% bespoke, ultra-clean code with sub-second global speed</li>
+              <li>• Direct native connection to your Company AI Brain &amp; databases</li>
+              <li>• Event-driven webhook pipelines eliminate back-office data entry</li>
+              <li>• You own 100% of the code, intellectual property, and design assets</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CROSS SERVICE NAVIGATION -->
+        <div class="cross-grid" style="margin-top: 36px;">
+          <a href="company-ai-brain.html" class="cross-card">
+            <h4>★ Company AI Brain &amp; DB Hub</h4>
+            <p>Automate large databases, employee training, and 24/7 customer support.</p>
+            <span>Explore AI Brain →</span>
+          </a>
+          <a href="custom-applications.html" class="cross-card">
+            <h4>01 // Custom Applications</h4>
+            <p>Replace per-seat SaaS taxes with tailored internal tools and portals.</p>
+            <span>Explore Custom Apps →</span>
+          </a>
+          <a href="workflow-automations.html" class="cross-card">
+            <h4>02 // Workflow Automations</h4>
+            <p>Connect your CRM, accounting, and apps into zero-touch 24/7 pipelines.</p>
+            <span>Explore Automations →</span>
+          </a>
+          <a href="ai-integrations.html" class="cross-card">
+            <h4>03 // AI Integrations</h4>
+            <p>Embed document extraction, vision models, and voice AI into your stack.</p>
+            <span>Explore AI Integrations →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY CTA SECTION -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <div class="pill" style="margin-bottom: 12px;">LET'S BUILD YOUR WEB PLATFORM</div>
+            <h2>Scope Your Custom Web Platform.</h2>
+            <p>Tell us what interactive features, portals, or high-performance web experience your business needs—we’ll design an actionable architectural blueprint.</p>
+          </div>
+          <form class="quick-form" id="project-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+            </div>
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <select name="focus" aria-label="Primary Focus">
+              <option value="Custom Web Design &amp; Development" selected>Custom Web Design &amp; Development</option>
+              <option value="Company AI Brain">Company AI Brain</option>
+              <option value="Custom Application">Custom Application / Portal</option>
+              <option value="Workflow Automation">Workflow Automation</option>
+              <option value="AI Integration &amp; Agents">AI Integration &amp; Agents</option>
+              <option value="Full Stack (Web + Brain + Automation)">Full Stack (Web + Brain + Automation)</option>
+            </select>
+            <textarea name="goal" rows="4" placeholder="Describe the web experience, interactive portal, or redesign you want to build..." required></textarea>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">Request Web Blueprint →</button>
+            <div class="form-feedback" id="form-feedback">✓ Request received! We'll reach out shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/mvn-separate-badge-white.svg" alt="MVN Icon" />
+        <span>MODERN VISTAS NETWORK</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="company-ai-brain.html">Company AI Brain</a>
+        <a href="web-design-development.html">Web Design</a>
+        <a href="custom-applications.html">Custom Apps</a>
+        <a href="workflow-automations.html">Automations</a>
+        <a href="ai-integrations.html">AI Integrations</a>
+      </div>
+      <div>&copy; 2026 Modern Vistas Network &bull; <a href="https://modernvistasnetwork.com" style="color: inherit; text-decoration: none; font-weight: 600;">modernvistasnetwork.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navMenu.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      navMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('is-open')) {
+          navMenu.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    const form = document.getElementById('project-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
