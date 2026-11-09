@@ -56,12 +56,12 @@
     }
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; width: 100%; }
     .navbar-wrap { background: #FFFFFF; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .navbar { display: flex; align-items: center; justify-content: center; height: 84px; gap: 44px; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 24px; }
     .brand-link { display: flex; align-items: center; text-decoration: none; }
-    .brand-logo { height: 54px; width: auto; display: block; object-fit: contain; }
-    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 24px; }
-    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14.5px; font-weight: 600; transition: color 0.2s ease; }
+    .brand-logo { height: 50px; width: auto; display: block; object-fit: contain; }
+    .nav-menu { display: flex; align-items: center; justify-content: center; gap: 20px; }
+    .nav-links { display: flex; align-items: center; gap: 16px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--navy); font-size: 14px; font-weight: 600; transition: color 0.2s ease; white-space: nowrap; }
     .nav-links a:hover, .nav-links a.active { color: var(--teal); }
     .mobile-menu-toggle { display: none; }
     .btn {
@@ -278,7 +278,7 @@
 <body>
   <div class="navbar-wrap">
     <div class="container navbar">
-      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" /></a>
+      <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home"><img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network — Custom Apps &amp; Automation" class="brand-logo" /></a>
       <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
