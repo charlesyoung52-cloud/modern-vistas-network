@@ -65,7 +65,7 @@
       flex-direction: column;
     }
     .container {
-      max-width: 1160px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
       width: 100%;
@@ -81,9 +81,9 @@
     .navbar {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       height: 84px;
-      gap: 44px;
+      gap: 24px;
     }
     .brand-link {
       display: flex;
@@ -91,7 +91,7 @@
       text-decoration: none;
     }
     .brand-logo {
-      height: 54px;
+      height: 50px;
       width: auto;
       display: block;
       object-fit: contain;
@@ -100,20 +100,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 20px;
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 16px;
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
     .nav-links a {
       text-decoration: none;
       color: var(--navy);
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 600;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
     .nav-links a:hover,
     .nav-links a.active {
@@ -1271,7 +1274,7 @@
   <div class="navbar-wrap">
     <div class="container navbar">
       <a href="index.html" class="brand-link" aria-label="Modern Vistas Network Home">
-        <img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network" class="brand-logo" />
+        <img src="assets/mvn-together-lockup-white.svg" alt="Modern Vistas Network — Custom Apps &amp; Automation" class="brand-logo" />
       </a>
       <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
         <span class="bar"></span>
